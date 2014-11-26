@@ -9,6 +9,7 @@
             <ColumnDefinition Width="137*"/>
         </Grid.ColumnDefinitions>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="108,-108,0,0" TextWrapping="Wrap" Text="Save " VerticalAlignment="Top" Width="36"/>
+        <Button Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Margin="50,-82,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
