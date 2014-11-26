@@ -44,5 +44,16 @@ namespace LTD_G_UNIT
             Notification.Text = _controller.DataToDisplay();
             AddText.Text = " ";  
         }
+        //HOME BUTTON
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            
+        }
+        //EXIT BUTTON
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
