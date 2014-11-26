@@ -20,9 +20,15 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class MainWindow : Window
     {
+        updatestockWindow updt = new updatestockWindow();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            updt.Show();
         }
     }
 }
