@@ -13,7 +13,9 @@ namespace LTD_G_UNIT
 
         public void addToDB(string type, int toadd)
         {
-            //ProdX = new Product(type, toadd);
+            _Databasecontroller = new DatabaseController();
+
+            ProdX = new Product(type, toadd);
 
             _Databasecontroller.AddItemsToInventory(type, toadd);
 
