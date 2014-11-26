@@ -154,21 +154,22 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,76,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,106,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,135,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="18" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,166,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,195,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,225,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,255,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,284,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,195,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,225,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,255,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,135,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,165,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_A" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,76,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_B" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,106,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_C" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,135,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_D" HorizontalAlignment="Left" Height="18" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,166,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_E" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,195,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_F" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,225,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_G" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,255,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_H" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="71" Margin="121,284,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_M" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,195,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_N" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,225,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_S" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,255,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_K" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,135,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_L" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,165,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="Type_I" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,76,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="348,106,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_J" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="70" Margin="349,106,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <Button Name="updatebutton" Content="Button" HorizontalAlignment="Left" Margin="394,326,0,0" VerticalAlignment="Top" Width="115" Click="updatebutton_Click"/>
 
     </Grid>
 </Window>
