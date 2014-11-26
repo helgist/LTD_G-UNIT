@@ -53,6 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ControllerForWindows.cs" />
     <Compile Include="updatestockWindow.xaml.cs">
       <DependentUpon>updatestockWindow.xaml</DependentUpon>
     </Compile>
