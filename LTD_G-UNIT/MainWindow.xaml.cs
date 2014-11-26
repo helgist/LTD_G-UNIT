@@ -20,7 +20,7 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class MainWindow : Window
     {
-        updatestockWindow updt = new updatestockWindow();
+        updatestockWindow updt; 
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace LTD_G_UNIT
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
+            updt = new updatestockWindow();
             updt.Show();
         }
     }

@@ -13,13 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace LTD_G_UNIT
+
 {
     /// <summary>
     /// Interaction logic for updatestockWindow.xaml
     /// </summary>
     public partial class updatestockWindow : Window
     {
-        Controller _Controller = new Controller();
+        Controller _Controller;
         DatabaseController _DBC = new DatabaseController();
        // updatestockWindow upwind = new updatestockWindow();
 
@@ -30,6 +31,7 @@ namespace LTD_G_UNIT
 
         private void updatebutton_Click(object sender, RoutedEventArgs e)
         {
+            _Controller  = new Controller();
              // conection for type to DB
             try
             {
