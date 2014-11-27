@@ -10,6 +10,7 @@ namespace LTD_G_UNIT
 {
     class DatabaseController
     {
+        //hello helgi
         public void AddItemsToInventory(string type, int addtostock)
         {
 
