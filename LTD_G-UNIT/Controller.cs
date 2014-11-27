@@ -11,6 +11,8 @@ namespace LTD_G_UNIT
         Product ProdX;
         DatabaseController _Databasecontroller;
 
+
+        //This method adds to inventory in database
         public void addToDB(string type, int toadd)
         {
             _Databasecontroller = new DatabaseController();
@@ -20,7 +22,18 @@ namespace LTD_G_UNIT
             _Databasecontroller.AddItemsToInventory(type, toadd);
 
 
-            //_Databasecontroller.add(type, toadd (or Prodx))
+         
+
+        }
+
+        //this method subtracts from database
+        public void MakeNewSale(string type, int subbtract)
+        {
+            _Databasecontroller = new DatabaseController();
+
+            Product Productsold = new Product(type, subbtract);
+
+            _Databasecontroller.NewSaleMade(type, subbtract);
 
         }
     }
