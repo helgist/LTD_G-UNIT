@@ -28,9 +28,11 @@ namespace LTD_G_UNIT
         }
         public MainWindow()
         {
+           
             InitializeComponent();
             Notification.Text = "";
             AddText.Text = "";
+            Notification.IsReadOnly = true;
             _controller = new ControllerForWindows();
         }
        
@@ -55,5 +57,14 @@ namespace LTD_G_UNIT
         {
             this.Close();
         }
+        //Change the cancel button to clear
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            Notification.Clear();
+            _controller.ClearData();
+          
+        }
+
+       
     }
 }

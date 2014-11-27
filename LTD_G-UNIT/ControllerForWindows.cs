@@ -10,6 +10,13 @@ namespace LTD_G_UNIT
     {
         List<string> _allData;
         //Name of controller
+
+
+        //Method for clear Data
+        public void ClearData()
+        {
+            _allData.Clear();
+        }
         public ControllerForWindows()
         {
             _allData = new List<string>();
@@ -31,4 +38,4 @@ namespace LTD_G_UNIT
              return returnData;
         }
     }
-}
+}   
