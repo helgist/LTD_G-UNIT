@@ -20,16 +20,29 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class MainWindow : Window
     {
-        updatestockWindow updt; 
+        updatestockWindow updt = new updatestockWindow();
+        //Shows the second menu
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            updt.Show();
+        }
         public MainWindow()
         {
             InitializeComponent();
+            Notification.Text = "";
+            AddText.Text = "";
+            _controller = new ControllerForWindows();
         }
+       
+        //method for Save button 
 
-        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        ControllerForWindows _controller;
+        private void SaveButton1_Click(object sender, RoutedEventArgs e)
         {
-            updt = new updatestockWindow();
-            updt.Show();
+            DateTime dt = DateTime.Now;
+            _controller.SaveNotification(AddText.Text + " \n " + dt);
+            Notification.Text = _controller.DataToDisplay();
+            AddText.Text = " ";  
         }
     }
 }
