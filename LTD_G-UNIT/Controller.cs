@@ -36,5 +36,7 @@ namespace LTD_G_UNIT
             _Databasecontroller.NewSaleMade(type, subbtract);
 
         }
+        // this method add orders to list
+        public void addtoorderlist(double price,)
     }
 }

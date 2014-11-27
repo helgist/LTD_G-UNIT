@@ -54,6 +54,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ControllerForWindows.cs" />
+    <Compile Include="costumer.cs" />
+    <Compile Include="order.cs" />
+    <Compile Include="saleswindow.xaml.cs">
+      <DependentUpon>saleswindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="updatestockWindow.xaml.cs">
       <DependentUpon>updatestockWindow.xaml</DependentUpon>
     </Compile>
@@ -71,6 +76,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="saleswindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="updatestockWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
