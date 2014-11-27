@@ -12,7 +12,7 @@ namespace LTD_G_UNIT
     {
         public void AddItemsToInventory(string type, int addtostock)
         {
-            //int jens = int.Parse(addtostock);
+            
             SqlConnection Conn = new SqlConnection(
                                                    "Server=ealdb1.eal.local;" +
                                                    "Database=EJL20_DB;" +
