@@ -171,7 +171,97 @@ namespace LTD_G_UNIT
                 catch (Exception)
                 {
 
+
                 }
+                List<Product> productlist = new List<Product>();
+            if (int.Parse(type_A.Text)!=0)
+            {
+                Product product1 = new Product("type1",int.Parse(type_A.Text));
+                productlist.Add(product1);
+            }
+              if (int.Parse(type_B.Text)!=0)
+            {
+                Product product2 = new Product("type2",int.Parse(type_B.Text));
+                productlist.Add(product2);
+            }
+              if (int.Parse(type_C.Text)!=0)
+            {
+                Product product3 = new Product("type3",int.Parse(type_C.Text));
+                productlist.Add(product3);
+            }
+              if (int.Parse(type_D.Text)!=0)
+            {
+                Product product4 = new Product("type4",int.Parse(type_D.Text));
+                productlist.Add(product4);
+            }
+              if (int.Parse(type_E.Text)!=0)
+            {
+                Product product5 = new Product("type5",int.Parse(type_E.Text));
+                productlist.Add(product5);
+            }
+              if (int.Parse(type_G.Text)!=0)
+            {
+                Product product6 = new Product("type6",int.Parse(type_G.Text));
+                productlist.Add(product6);
+            }
+              if (int.Parse(type_H.Text)!=0)
+            {
+                Product product7 = new Product("type7",int.Parse(type_H.Text));
+                productlist.Add(product7);
+            }
+              if (int.Parse(Type_I.Text)!=0)
+            {
+                Product product8 = new Product("type9",int.Parse(type_I.Text));
+                productlist.Add(product8);
+            }
+              if (int.Parse(type_J.Text)!=0)
+            {
+                Product product9 = new Product("type10",int.Parse(type_J.Text));
+                productlist.Add(product9);
+            }
+              if (int.Parse(type_K.Text)!=0)
+            {
+                Product product10 = new Product("type11",int.Parse(type_K.Text));
+                productlist.Add(product10);
+            }
+              if (int.Parse(type_L.Text)!=0)
+            {
+                Product product11 = new Product("type12",int.Parse(type_L.Text));
+                productlist.Add(product11);
+            }
+              if (int.Parse(Type_I.Text)!=0)
+            {
+                Product product12 = new Product("type13",int.Parse(Type_I.Text));
+                productlist.Add(product12);
+            }
+              if (int.Parse(type_M.Text)!=0)
+            {
+                Product product13 = new Product("type14",int.Parse(type_M.Text));
+                productlist.Add(product13);
+            }
+              if (int.Parse(type_N.Text)!=0)
+            {
+                Product product14 = new Product("type15",int.Parse(type_N.Text));
+                productlist.Add(product14);
+            }
+              if (int.Parse(type_S.Text)!=0)
+            {
+                Product product15 = new Product("type16",int.Parse(type_S.Text));
+                productlist.Add(product15);
+            }
+
+
+
+            
+            }
+
+
+
+
+
+
+
+
            
 
             }
