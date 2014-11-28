@@ -164,7 +164,7 @@
         <TextBox Name="type_H" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="71" Margin="478,315,0,0" RenderTransformOrigin="0.518,1.685"/>
         <TextBox Name="type_M" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,209,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="type_N" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,239,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox Name="type_S" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,269,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="type_S" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="319,39,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="type_K" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,149,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="type_L" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,179,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="Type_I" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,85,0,0" RenderTransformOrigin="0.613,0.526"/>
