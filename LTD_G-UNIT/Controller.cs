@@ -10,7 +10,11 @@ namespace LTD_G_UNIT
     {
         Product ProdX;
         DatabaseController _Databasecontroller;
+        order Order;
 
+        List<order> _orderlist;
+
+        
 
         //This method adds to inventory in database
         public void addToDB(string type, int toadd)
@@ -20,8 +24,6 @@ namespace LTD_G_UNIT
             ProdX = new Product(type, toadd);
 
             _Databasecontroller.AddItemsToInventory(type, toadd);
-
-
          
 
         }
@@ -36,7 +38,20 @@ namespace LTD_G_UNIT
             _Databasecontroller.NewSaleMade(type, subbtract);
 
         }
+
+        public void list_of_orders()
+        {
+            _orderlist = new List<order>();
+
+            _orderlist.Add();
+
+
+        }
         // this method add orders to list
-        public void addtoorderlist(double price,)
+        //public void addtoorderlist(double price,)
+        //{
+
+
+        //}
     }
 }

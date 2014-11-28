@@ -33,10 +33,22 @@ namespace LTD_G_UNIT
 
         private void sale_Click(object sender, RoutedEventArgs e)
         {
+            List<Product> Productlist = new List<Product>();
+
             costumer newcostumer = new costumer();
             newcostumer.Name = name.Text;
             newcostumer.Telephon = int.Parse(telphon.Text);
             newcostumer.Adress = adress.Text;
+
+
+            order Order1 = new order();
+
+            Order1.costomer1 = newcostumer;
+            Order1.Productlist = Productlist;
+
+            
+
+
 
             _Controller = new Controller();
             try
