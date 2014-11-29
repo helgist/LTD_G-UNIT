@@ -19,7 +19,7 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class saleswindow : Window
     {
-        costumer costumer1;
+        
         Controller _Controller;
         public saleswindow()
         {
@@ -35,19 +35,11 @@ namespace LTD_G_UNIT
         {
             List<Product> Productlist = new List<Product>();
 
-            costumer newcostumer = new costumer();
-            newcostumer.Name = name.Text;
-            newcostumer.Telephon = int.Parse(telphon.Text);
-            newcostumer.Adress = adress.Text;
-
-
-            order Order1 = new order();
+            _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, Productlist);
 
             Order1.costomer1 = newcostumer;
             Order1.Productlist = Productlist;
-
-            
-
+            Order1.dateoforder = DateTime.Now;
 
 
             _Controller = new Controller();
@@ -253,19 +245,10 @@ namespace LTD_G_UNIT
 
 
             
-            }
+       }
 
+    }
 
-
-
-
-
-
-
-           
-
-            }
-
-        }
+  }
     
 

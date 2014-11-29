@@ -12,6 +12,7 @@ namespace LTD_G_UNIT
         DatabaseController _Databasecontroller;
         order Order;
 
+        //list of our orders
         List<order> _orderlist;
 
         
@@ -39,19 +40,23 @@ namespace LTD_G_UNIT
 
         }
 
-        public void list_of_orders()
+        //this method creates new order
+        public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist)
         {
-            _orderlist = new List<order>();
+            costumer newcostumer = new costumer();
+          
+            newcostumer.Name = name;
+            newcostumer.Telephon = telphon;
+            newcostumer.Adress = adress;
 
-            _orderlist.Add();
+            order Order1 = new order();
+            Order1.costomer1 = newcostumer;
+            Order1.dateoforder = DateTime.Now;
+            Order1.Productlist = Productlist;
 
 
         }
-        // this method add orders to list
-        //public void addtoorderlist(double price,)
-        //{
 
-
-        //}
+        
     }
 }
