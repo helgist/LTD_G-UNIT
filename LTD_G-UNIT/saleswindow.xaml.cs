@@ -211,7 +211,7 @@ namespace LTD_G_UNIT
             }
               if (int.Parse(Type_I.Text)!=0)
             {
-                Product product8 = new Product("type9",int.Parse(type_I.Text));
+                Product product8 = new Product("type9",int.Parse(Type_I.Text));
                 productlist.Add(product8);
             }
               if (int.Parse(type_J.Text)!=0)
@@ -267,5 +267,5 @@ namespace LTD_G_UNIT
             }
 
         }
-    }
+    
 
