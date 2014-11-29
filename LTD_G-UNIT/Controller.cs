@@ -40,7 +40,7 @@ namespace LTD_G_UNIT
 
         }
 
-        //this method creates new order
+        //this method creates new order(not reddy)
         public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist)
         {
             costumer newcostumer = new costumer();

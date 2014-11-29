@@ -1,0 +1,8 @@
+﻿<Window x:Class="LTD_G_UNIT.Check_stock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Check_stock" Height="300" Width="300">
+    <Grid>
+        
+    </Grid>
+</Window>
