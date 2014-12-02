@@ -20,7 +20,6 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class MainWindow : Window
     {
-        Check_stock chkStock = new Check_stock();
         updatestockWindow updt = new updatestockWindow();
         //Shows the second menu
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
@@ -58,20 +57,19 @@ namespace LTD_G_UNIT
         {
             this.Close();
         }
-
+        //Change the cancel button to clear
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            Notification.Clear();
+            _controller.ClearData();
+          
+        }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             saleswindow s1 = new saleswindow();
             s1.Show();
         }
-
-        private void CheckButton_Click(object sender, RoutedEventArgs e)
-        {
-            chkStock.Show();
-        }
-       // Thiss clear save botton
-      
 
        
     }

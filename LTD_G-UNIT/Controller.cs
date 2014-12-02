@@ -10,11 +10,10 @@ namespace LTD_G_UNIT
     {
         Product ProdX;
         DatabaseController _Databasecontroller;
-       
+        order Order;
 
         //list of our orders
-        List<order> _Orderlist = new List<order>();
-
+        List<order> _orderlist;
 
         
 
@@ -41,8 +40,8 @@ namespace LTD_G_UNIT
 
         }
 
-        //this method creates new order(not reddy)
-        public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist,string deliverydate)
+        //this method creates new order
+        public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist)
         {
             costumer newcostumer = new costumer();
           
@@ -54,11 +53,6 @@ namespace LTD_G_UNIT
             Order1.costomer1 = newcostumer;
             Order1.dateoforder = DateTime.Now;
             Order1.Productlist = Productlist;
-            Order1.deliverydate = deliverydate;
-          //  Order1.price = 
-
-            _Orderlist.Add(Order1);
-          
 
 
         }

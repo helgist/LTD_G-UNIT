@@ -178,8 +178,7 @@
         <TextBox Name="adress" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Margin="105,179,0,0"/>
         <Button Name="sale" Content="sale" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="561,398,0,0" Click="sale_Click"/>
         <Button x:Name="cancel" Content="cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="666,398,0,0"/>
-        <Label Content="Delivery date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,205,0,0"/>
-        <TextBox x:Name="Deliverydate" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Margin="105,208,0,0"/>
+       
 
     </Grid>
 </Window>

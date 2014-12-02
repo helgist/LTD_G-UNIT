@@ -29,7 +29,7 @@ namespace LTD_G_UNIT
            List<Product> productlist = new List<Product>();
            Controller _Controller = new Controller();
 
-            _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, productlist, Deliverydate.Text);
+            _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, productlist);
 
 
             
