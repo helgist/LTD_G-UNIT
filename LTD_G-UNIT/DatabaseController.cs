@@ -11,6 +11,8 @@ namespace LTD_G_UNIT
     class DatabaseController
     {
         //hello helgi
+        Product _product ;
+        Checkstock _checker = new Checkstock();
         public void AddItemsToInventory(string type, int addtostock)
         {
 
@@ -119,5 +121,42 @@ namespace LTD_G_UNIT
 
 
             }
+
+        public void seestock()
+        {
+             SqlConnection Conn = new SqlConnection(
+                                                      "Server=ealdb1.eal.local;" +
+                                                      "Database=EJL20_DB;" +
+                                                      "User ID=ejl20_usr;" +
+                                                      "Password=Baz1nga20;");
+                try
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("getstock", Conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                   SqlDataReader rdr = cmd.ExecuteReader();
+                   while (rdr.HasRows && rdr.Read())
+                        {
+                         
+                        _checker.listboxstock.Items.Add("Product: " + rdr["Grade"] );
+                       
+                        }
+
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine("conection error " + e.Message);
+                }
+
+                finally
+                {
+                    Conn.Close();
+                    Conn.Dispose();
+                }  
+
+        }
     }
 }

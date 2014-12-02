@@ -22,7 +22,7 @@ namespace LTD_G_UNIT
         {
             _Databasecontroller = new DatabaseController();
 
-            ProdX = new Product(type, toadd);
+            ProdX = new Product(type, toadd, 0);
 
             _Databasecontroller.AddItemsToInventory(type, toadd);
          
@@ -34,7 +34,7 @@ namespace LTD_G_UNIT
         {
             _Databasecontroller = new DatabaseController();
 
-            Product Productsold = new Product(type, subbtract);
+            Product Productsold = new Product(type, subbtract, 0);
 
             _Databasecontroller.NewSaleMade(type, subbtract);
 
@@ -56,7 +56,7 @@ namespace LTD_G_UNIT
 
 
         }
-
+    
         
     }
 }
