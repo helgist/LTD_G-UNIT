@@ -67,7 +67,7 @@ namespace LTD_G_UNIT
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            saleswindow s1 = new saleswindow();
+            newsaleswindow s1 = new newsaleswindow();
             s1.Show();
         }
 
