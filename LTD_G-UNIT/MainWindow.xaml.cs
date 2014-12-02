@@ -58,13 +58,7 @@ namespace LTD_G_UNIT
         {
             this.Close();
         }
-        //Change the cancel button to clear
-        private void ClearButton_Click(object sender, RoutedEventArgs e)
-        {
-            Notification.Clear();
-            _controller.ClearData();
-          
-        }
+
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +70,8 @@ namespace LTD_G_UNIT
         {
             chkStock.Show();
         }
+       // Thiss clear save botton
+      
 
        
     }

@@ -19,18 +19,15 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class saleswindow : Window
     {
-        
-        Controller _Controller;
-       
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
+
+
 
         private void sale_Click(object sender, RoutedEventArgs e)
         {
            List<Product> productlist = new List<Product>();
+           Controller _Controller = new Controller();
 
             _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, productlist, Deliverydate.Text);
 

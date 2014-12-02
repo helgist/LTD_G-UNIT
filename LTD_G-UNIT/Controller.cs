@@ -10,10 +10,11 @@ namespace LTD_G_UNIT
     {
         Product ProdX;
         DatabaseController _Databasecontroller;
-        order Order;
+       
 
         //list of our orders
-        List<order> _orderlist;
+        List<order> _Orderlist = new List<order>();
+
 
         
 
@@ -56,7 +57,8 @@ namespace LTD_G_UNIT
             Order1.deliverydate = deliverydate;
           //  Order1.price = 
 
-            _orderlist.Add(Order1);
+            _Orderlist.Add(Order1);
+          
 
 
         }
