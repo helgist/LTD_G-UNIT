@@ -71,6 +71,12 @@ namespace LTD_G_UNIT
             s1.Show();
         }
 
+        private void CheckButton_Click(object sender, RoutedEventArgs e)
+        {
+            Checkstock chk = new Checkstock();
+            chk.Show();
+        }
+
        
     }
 }
