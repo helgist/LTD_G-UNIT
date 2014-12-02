@@ -21,10 +21,7 @@ namespace LTD_G_UNIT
     {
         
         Controller _Controller;
-        public saleswindow()
-        {
-            saleswindow sw1 =new saleswindow ();
-        }
+       
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -33,12 +30,16 @@ namespace LTD_G_UNIT
 
         private void sale_Click(object sender, RoutedEventArgs e)
         {
-            List<Product> Productlist = new List<Product>();
+           List<Product> productlist = new List<Product>();
 
-            _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, Productlist);
+            _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, productlist, Deliverydate.Text);
 
 
-            _Controller = new Controller();
+            
+
+
+            //this updates database
+             if (int.Parse(type_A.Text)!=0)
             try
             {
                 _Controller.MakeNewSale("type1", int.Parse(type_A.Text));
@@ -47,6 +48,7 @@ namespace LTD_G_UNIT
             {
                  
             }
+             if (int.Parse(type_B.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type2", int.Parse(type_B.Text));
@@ -55,6 +57,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(type_C.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type3", int.Parse(type_C.Text));
@@ -63,6 +66,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(type_D.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type4", int.Parse(type_D.Text));
@@ -71,6 +75,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(type_E.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type5", int.Parse(type_E.Text));
@@ -79,6 +84,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(type_F.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type6", int.Parse(type_F.Text));
@@ -87,6 +93,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(type_G.Text) != 0)
                try
             {
                 _Controller.MakeNewSale("type7", int.Parse(type_G.Text));
@@ -95,6 +102,7 @@ namespace LTD_G_UNIT
             {
                  
             }
+             if (int.Parse(type_H.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type8", int.Parse(type_H.Text));
@@ -103,6 +111,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(Type_I.Text) != 0)
             try
             {
                 _Controller.MakeNewSale("type9", int.Parse(Type_I.Text));
@@ -111,6 +120,7 @@ namespace LTD_G_UNIT
             {
 
             }
+             if (int.Parse(type_J.Text) != 0)
                try
             {
                 _Controller.MakeNewSale("type10", int.Parse(type_J.Text));
@@ -119,7 +129,7 @@ namespace LTD_G_UNIT
             {
                  
             }
-        
+             if (int.Parse(type_K.Text) != 0)
             try     
             {
                     _Controller.MakeNewSale("type11", int.Parse(type_K.Text));
@@ -128,6 +138,7 @@ namespace LTD_G_UNIT
                 {
 
                 }
+             if (int.Parse(type_L.Text) != 0)
                 try
                 {
                     _Controller.MakeNewSale("type12", int.Parse(type_L.Text));
@@ -136,6 +147,7 @@ namespace LTD_G_UNIT
                 {
 
                 }
+             if (int.Parse(type_M.Text) != 0)
                 try
                 {
                     _Controller.MakeNewSale("type13", int.Parse(type_M.Text));
@@ -144,6 +156,7 @@ namespace LTD_G_UNIT
                 {
 
                 }
+             if (int.Parse(type_N.Text) != 0)
                 try
                 {
                     _Controller.MakeNewSale("type14", int.Parse(type_N.Text));
@@ -152,6 +165,7 @@ namespace LTD_G_UNIT
                 {
 
                 }
+             if (int.Parse(type_S.Text) != 0)
                 try
                 {
                     _Controller.MakeNewSale("type15", int.Parse(type_S.Text));
@@ -161,7 +175,7 @@ namespace LTD_G_UNIT
 
 
                 }
-                List<Product> productlist = new List<Product>();
+              //add to product list
             if (int.Parse(type_A.Text)!=0)
             {
                 Product product1 = new Product("type1",int.Parse(type_A.Text));
@@ -237,10 +251,7 @@ namespace LTD_G_UNIT
                 Product product15 = new Product("type16",int.Parse(type_S.Text));
                 productlist.Add(product15);
             }
-
-
-
-            
+          
        }
 
     }

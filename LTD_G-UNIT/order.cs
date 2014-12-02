@@ -13,7 +13,7 @@ namespace LTD_G_UNIT
          public List<Product> Productlist { get; set; }
          public double price { get; set; }
          public DateTime dateoforder { get; set; }
-         public DateTime deliverydate{ get; set; }
+         public string deliverydate{ get; set; }
          public int orderid {get; set;}
          
 
@@ -23,6 +23,8 @@ namespace LTD_G_UNIT
     {
         newID = newID +1;
         orderid = newID;
+
+       
     }
     
     }

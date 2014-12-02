@@ -170,14 +170,16 @@
         <TextBox Name="Type_I" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,90,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="type_J" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="691,120,0,0" RenderTransformOrigin="0.613,0.526"/>
         <Label Content="sale factor" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="6.496,1.347" Margin="319,0,0,0" Width="172" FontWeight="Bold" FontSize="22"/>
-        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,116,0,0"/>
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,116,0,0"/>
         <TextBox Name="name" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Margin="105,116,0,0"/>
-        <Label  Content="telphon" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,146,0,0"/>
+        <Label  Content="telphon" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,149,0,0"/>
         <TextBox Name="telphon" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Margin="105,149,0,0"/>
-        <Label Content="adress" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,179,0,0"/>
+        <Label Content="adress" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,180,0,0"/>
         <TextBox Name="adress" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Margin="105,179,0,0"/>
         <Button Name="sale" Content="sale" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="561,398,0,0" Click="sale_Click"/>
         <Button x:Name="cancel" Content="cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="666,398,0,0"/>
+        <Label Content="Delivery date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,205,0,0"/>
+        <TextBox x:Name="Deliverydate" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148" Margin="105,208,0,0"/>
 
     </Grid>
 </Window>

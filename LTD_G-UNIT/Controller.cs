@@ -41,7 +41,7 @@ namespace LTD_G_UNIT
         }
 
         //this method creates new order(not reddy)
-        public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist)
+        public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist,string deliverydate)
         {
             costumer newcostumer = new costumer();
           
@@ -53,6 +53,10 @@ namespace LTD_G_UNIT
             Order1.costomer1 = newcostumer;
             Order1.dateoforder = DateTime.Now;
             Order1.Productlist = Productlist;
+            Order1.deliverydate = deliverydate;
+          //  Order1.price = 
+
+            _orderlist.Add(Order1);
 
 
         }

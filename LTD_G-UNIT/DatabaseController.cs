@@ -34,7 +34,7 @@ namespace LTD_G_UNIT
             }
             catch (SqlException e)
             {
-                Console.WriteLine("conection error " + e.Message);
+                Console.WriteLine("SQL conection error " + e.Message);
             }
             finally
             {
@@ -43,7 +43,7 @@ namespace LTD_G_UNIT
             }
         }
 
-            public void NewSaleMade(string type, int addtostock)
+        public void NewSaleMade(string type, int addtostock)
         {
             
             SqlConnection Conn = new SqlConnection(
@@ -59,14 +59,14 @@ namespace LTD_G_UNIT
 
                 cmd.Parameters.Add(new SqlParameter("@Grade", type));
                 cmd.Parameters.Add(new SqlParameter("@Quantity", addtostock));
-
+                
 
                 cmd.ExecuteNonQuery();
 
             }
             catch (SqlException e)
             {
-                Console.WriteLine("conection error " + e.Message);
+                Console.WriteLine("SQL conection error " + e.Message);
             }
             finally
             {
@@ -75,5 +75,49 @@ namespace LTD_G_UNIT
             }
 
         }
+
+        public void CalculatePrice(string type)
+            {
+                SqlConnection Conn = new SqlConnection(
+                                                      "Server=ealdb1.eal.local;" +
+                                                      "Database=EJL20_DB;" +
+                                                      "User ID=ejl20_usr;" +
+                                                      "Password=Baz1nga20;");
+                try
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("getprice", Conn);
+                    cmd.Parameters.Add(new SqlParameter("@Grade", type));
+
+                    SqlDataReader getprice = cmd.ExecuteReader();
+
+                    if (getprice.HasRows)
+                    {
+                        while (getprice.Read())
+                        {
+                            Console.WriteLine("{0}", getprice.GetInt32(0),
+                                getprice.GetString(1));
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No Price found.");
+                    }
+                    getprice.Close();
+
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine("SQL conection error " + e.Message);
+                }
+                finally
+                {
+                    Conn.Close();
+                    Conn.Dispose();
+                }
+
+
+            }
     }
 }
