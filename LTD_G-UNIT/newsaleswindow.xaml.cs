@@ -27,9 +27,9 @@ namespace LTD_G_UNIT
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Controller _Controller = new Controller();
-            List<Product> Productlist = new List<Product>();
+            List<Product> productlist = new List<Product>();
 
-                        _Controller.createnewOrder(name.Text, int.Parse(Phone.Text), Address.Text, Productlist);
+            
             
                        
 
@@ -37,7 +37,7 @@ namespace LTD_G_UNIT
                         _Controller = new Controller();
                         try
                         {
-                            _Controller.MakeNewSale("type1", int.Parse(type_A.Text));
+                            _Controller.MakeNewSale("type1", int.Parse(type_A.Text),2300);
                         }
                         catch(Exception )
                         {
@@ -45,7 +45,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type2", int.Parse(type_B.Text));
+                            _Controller.MakeNewSale("type2", int.Parse(type_B.Text),2200);
                         }
                         catch (Exception)
                         {
@@ -53,7 +53,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type3", int.Parse(type_C.Text));
+                            _Controller.MakeNewSale("type3", int.Parse(type_C.Text),2400);
                         }
                         catch (Exception)
                         {
@@ -61,7 +61,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type4", int.Parse(type_D.Text));
+                            _Controller.MakeNewSale("type4", int.Parse(type_D.Text),2500);
                         }
                         catch (Exception)
                         {
@@ -69,7 +69,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type5", int.Parse(type_E.Text));
+                            _Controller.MakeNewSale("type5", int.Parse(type_E.Text),2600);
                         }
                         catch (Exception)
                         {
@@ -77,7 +77,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type6", int.Parse(type_F.Text));
+                            _Controller.MakeNewSale("type6", int.Parse(type_F.Text),2700);
                         }
                         catch (Exception)
                         {
@@ -85,7 +85,7 @@ namespace LTD_G_UNIT
                         }
                            try
                         {
-                            _Controller.MakeNewSale("type7", int.Parse(type_G.Text));
+                            _Controller.MakeNewSale("type7", int.Parse(type_G.Text),2800);
                         }
                         catch(Exception )
                         {
@@ -93,7 +93,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type8", int.Parse(type_H.Text));
+                            _Controller.MakeNewSale("type8", int.Parse(type_H.Text),2900);
                         }
                         catch (Exception)
                         {
@@ -101,7 +101,7 @@ namespace LTD_G_UNIT
                         }
                         try
                         {
-                            _Controller.MakeNewSale("type9", int.Parse(Type_I.Text));
+                            _Controller.MakeNewSale("type9", int.Parse(Type_I.Text),3000);
                         }
                         catch (Exception)
                         {
@@ -109,7 +109,7 @@ namespace LTD_G_UNIT
                         }
                            try
                         {
-                            _Controller.MakeNewSale("type10", int.Parse(type_J.Text));
+                            _Controller.MakeNewSale("type10", int.Parse(type_J.Text),3100);
                         }
                         catch(Exception )
                         {
@@ -118,7 +118,7 @@ namespace LTD_G_UNIT
 
                         try     
                         {
-                                _Controller.MakeNewSale("type11", int.Parse(type_K.Text));
+                                _Controller.MakeNewSale("type11", int.Parse(type_K.Text),3200);
                             }
                             catch (Exception)
                             {
@@ -126,7 +126,7 @@ namespace LTD_G_UNIT
                             }
                             try
                             {
-                                _Controller.MakeNewSale("type12", int.Parse(type_L.Text));
+                                _Controller.MakeNewSale("type12", int.Parse(type_L.Text),3300);
                             }
                             catch (Exception)
                             {
@@ -134,7 +134,7 @@ namespace LTD_G_UNIT
                             }
                             try
                             {
-                                _Controller.MakeNewSale("type13", int.Parse(type_M.Text));
+                                _Controller.MakeNewSale("type13", int.Parse(type_M.Text),3400);
                             }
                             catch (Exception)
                             {
@@ -142,7 +142,7 @@ namespace LTD_G_UNIT
                             }
                             try
                             {
-                                _Controller.MakeNewSale("type14", int.Parse(type_N.Text));
+                                _Controller.MakeNewSale("type14", int.Parse(type_N.Text),3500);
                             }
                             catch (Exception)
                             {
@@ -150,18 +150,22 @@ namespace LTD_G_UNIT
                             }
                             try
                             {
-                                _Controller.MakeNewSale("type15", int.Parse(type_S.Text));
+                                _Controller.MakeNewSale("type15", int.Parse(type_S.Text),3600);
                             }
                             catch (Exception)
                             {
 
 
                             }
-                            List<Product> productlist = new List<Product>();
+
+                            
                         if (int.Parse(type_A.Text)!=0)
                         {
+                            
                             Product product1 = new Product("type1",int.Parse(type_A.Text), 2300);
                             productlist.Add(product1);
+                            int sum1 = (int.Parse(type_A.Text) * 2300);
+                            
                         }
                           if (int.Parse(type_B.Text)!=0)
                         {
@@ -233,9 +237,9 @@ namespace LTD_G_UNIT
                             Product product15 = new Product("type16",int.Parse(type_S.Text),3600);
                             productlist.Add(product15);
                         }
-
-
-
+                            //price of the order
+                         
+                          _Controller.createnewOrder(name.Text, Phone.Text, Address.Text, productlist);
 
                    
         }

@@ -8,7 +8,7 @@ namespace LTD_G_UNIT
 {
     class Product
     {
-        public  List<Product> Productlist;
+        
         public string type { get; set; }
         public int quant { get; set; }
         public int price { get; set; }

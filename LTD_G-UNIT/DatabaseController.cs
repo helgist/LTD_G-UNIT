@@ -12,7 +12,8 @@ namespace LTD_G_UNIT
     {
         //hello helgi
         Product _product ;
-        Checkstock _checker = new Checkstock();
+        Checkstock _checker;
+        
         public void AddItemsToInventory(string type, int addtostock)
         {
 
@@ -136,12 +137,15 @@ namespace LTD_G_UNIT
                     SqlCommand cmd = new SqlCommand("getstock", Conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    _checker = new Checkstock();
 
                    SqlDataReader rdr = cmd.ExecuteReader();
                    while (rdr.HasRows && rdr.Read())
                         {
-                         
-                        _checker.listboxstock.Items.Add("Product: " + rdr["Grade"] );
+
+                            
+
+                            _checker.listboxstock.Items.Add("Product: " + rdr["Grade"] + " - In stock; " + rdr["Quantity"] + "  Price: " + rdr["prise"]);
                        
                         }
 
