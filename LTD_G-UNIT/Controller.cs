@@ -10,7 +10,6 @@ namespace LTD_G_UNIT
     {
         Product ProdX;
         DatabaseController _Databasecontroller;
-        order Order;
 
         //list of our orders
         List<order> _orderlist;
@@ -54,6 +53,9 @@ namespace LTD_G_UNIT
             Order1.dateoforder = DateTime.Now;
             Order1.Productlist = Productlist;
             Order1.deliverydate = delivery;
+
+            _orderlist.Add(Order1);
+
             
 
              
