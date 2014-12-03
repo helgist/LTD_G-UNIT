@@ -5,7 +5,7 @@
     <Grid Margin="0,0,0,-21">
         <Label Content="Number of Grades in stock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="168,10,0,0" Width="222" FontWeight="Bold" Height="38" FontSize="16"/>
         <ListBox Name="listboxstock" HorizontalAlignment="Left" Height="384" VerticalAlignment="Top" Width="473" Margin="30,48,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="445,453,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="display stock" HorizontalAlignment="Left" Margin="395,453,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
 
     </Grid>
 </Window>

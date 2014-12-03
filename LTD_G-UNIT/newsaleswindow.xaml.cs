@@ -239,7 +239,7 @@ namespace LTD_G_UNIT
                         }
                             //price of the order
                          
-                          _Controller.createnewOrder(name.Text, Phone.Text, Address.Text, productlist);
+                          _Controller.createnewOrder(name.Text, Phone.Text, Address.Text, productlist, Deliverydate.Text);
 
                    
         }
