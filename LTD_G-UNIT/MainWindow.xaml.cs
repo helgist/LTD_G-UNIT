@@ -66,15 +66,17 @@ namespace LTD_G_UNIT
           
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            saleswindow s1 = new saleswindow();
-            s1.Show();
-        }
+      
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
             chkStock.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            saleswindow sa1 = new saleswindow();
+            sa1.Show();
         }
 
        

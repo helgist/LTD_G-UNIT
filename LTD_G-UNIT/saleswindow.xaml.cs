@@ -21,10 +21,7 @@ namespace LTD_G_UNIT
     {
         
         Controller _Controller;
-        public saleswindow()
-        {
-            saleswindow sw1 =new saleswindow ();
-        }
+       
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -37,9 +34,9 @@ namespace LTD_G_UNIT
 
             _Controller.createnewOrder(name.Text, int.Parse(telphon.Text), adress.Text, Productlist);
 
-            Order1.costomer1 = newcostumer;
-            Order1.Productlist = Productlist;
-            Order1.dateoforder = DateTime.Now;
+            //Order1.costomer1 = newcostumer;
+            //Order1.Productlist = Productlist;
+            //Order1.dateoforder = DateTime.Now;
 
 
             _Controller = new Controller();
