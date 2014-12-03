@@ -56,8 +56,12 @@
     <Compile Include="Checkstock.xaml.cs">
       <DependentUpon>Checkstock.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
     <Compile Include="ControllerForWindows.cs" />
     <Compile Include="costumer.cs" />
+    <Compile Include="CreateNewClient.xaml.cs">
+      <DependentUpon>CreateNewClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="newsaleswindow.xaml.cs">
       <DependentUpon>newsaleswindow.xaml</DependentUpon>
     </Compile>
@@ -66,6 +70,10 @@
       <DependentUpon>updatestockWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Checkstock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateNewClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
