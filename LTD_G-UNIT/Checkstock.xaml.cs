@@ -19,7 +19,7 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class Checkstock : Window
     {
-        DatabaseController _Databasecontroller;
+        DatabaseController _Databasecontroller = new DatabaseController();
         public Checkstock()
         {
             InitializeComponent();

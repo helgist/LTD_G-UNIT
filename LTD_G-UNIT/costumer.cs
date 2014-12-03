@@ -9,7 +9,7 @@ namespace LTD_G_UNIT
     class costumer
     {
         public string Name { get; set; }
-         public int Telephon { get; set; }
+         public string Telephon { get; set; }
          public string Adress { get; set; }
     
     
