@@ -22,7 +22,7 @@ namespace LTD_G_UNIT
         {
             _Databasecontroller = new DatabaseController();
 
-            ProdX = new Product(type, toadd);
+            ProdX = new Product(type, toadd, 0);
 
             _Databasecontroller.AddItemsToInventory(type, toadd);
          
@@ -30,18 +30,18 @@ namespace LTD_G_UNIT
         }
 
         //this method subtracts from database
-        public void MakeNewSale(string type, int subbtract)
+        public void MakeNewSale(string type, int subbtract, int price)
         {
             _Databasecontroller = new DatabaseController();
 
-            Product Productsold = new Product(type, subbtract);
+            Product Productsold = new Product(type, subbtract, price);
 
             _Databasecontroller.NewSaleMade(type, subbtract);
 
         }
 
-        //this method creates new order(not reddy)
-        public void createnewOrder(string name, int telphon, string adress,List<Product> Productlist)
+        //this method creates new order
+        public void createnewOrder(string name, string telphon, string adress,List<Product> Productlist)
         {
             costumer newcostumer = new costumer();
           
@@ -54,9 +54,18 @@ namespace LTD_G_UNIT
             Order1.dateoforder = DateTime.Now;
             Order1.Productlist = Productlist;
 
+             
+            //price of the order
+            //int ans;
+            //foreach (var quant in Productlist)
+            //{
+
+            //    (quant * price) + ans;
+            //}
+
 
         }
-
+    
         
     }
 }

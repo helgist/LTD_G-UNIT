@@ -11,6 +11,10 @@ namespace LTD_G_UNIT
         List<string> _allData;
         //Name of controller
 
+      
+
+        //lIST FOR CLIENTS CLASS
+        List<Client> _clientlist;
 
         //Method for clear Data
         public void ClearData()
@@ -20,6 +24,14 @@ namespace LTD_G_UNIT
         public ControllerForWindows()
         {
             _allData = new List<string>();
+            _clientlist = new List<Client>();
+        }
+
+        public void newClient()
+        {
+            Client clie = new Client();
+            _clientlist.Add(clie);
+
         }
 
         internal void SaveNotification(String data)

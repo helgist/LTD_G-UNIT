@@ -20,11 +20,11 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class MainWindow : Window
     {
-        Check_stock chkStock = new Check_stock();
-        updatestockWindow updt = new updatestockWindow();
+        
         //Shows the second menu
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
+            updatestockWindow updt = new updatestockWindow();
             updt.Show();
         }
         public MainWindow()
@@ -66,18 +66,27 @@ namespace LTD_G_UNIT
           
         }
 
-      
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            newsaleswindow s1 = new newsaleswindow();
+            s1.Show();
+        }
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
-            chkStock.Show();
+           
+            Checkstock chk = new Checkstock();
+            chk.Show();
+            
+        }
+        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT
+        CreateNewClient cre = new CreateNewClient();
+        private void AddClient_Click(object sender, RoutedEventArgs e)
+        {
+            cre.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            saleswindow sa1 = new saleswindow();
-            sa1.Show();
-        }
+        
 
        
     }

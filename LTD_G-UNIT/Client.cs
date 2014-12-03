@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace LTD_G_UNIT
 {
-    class costumer
+    class Client
     {
         public string Name { get; set; }
-         public string Telephon { get; set; }
-         public string Adress { get; set; }
-    
-    
+        public string CompanyName { get; set;}
+        public string Address { get; set; }
+        public int Phone { get; set; }
+        public int MobilePhone { get; set; }
+
     }
 }

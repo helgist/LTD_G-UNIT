@@ -53,19 +53,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Check stock.xaml.cs">
-      <DependentUpon>Check stock.xaml</DependentUpon>
+    <Compile Include="Checkstock.xaml.cs">
+      <DependentUpon>Checkstock.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
     <Compile Include="ControllerForWindows.cs" />
     <Compile Include="costumer.cs" />
-    <Compile Include="order.cs" />
-    <Compile Include="saleswindow.xaml.cs">
-      <DependentUpon>saleswindow.xaml</DependentUpon>
+    <Compile Include="CreateNewClient.xaml.cs">
+      <DependentUpon>CreateNewClient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="newsaleswindow.xaml.cs">
+      <DependentUpon>newsaleswindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="order.cs" />
     <Compile Include="updatestockWindow.xaml.cs">
       <DependentUpon>updatestockWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Check stock.xaml">
+    <Page Include="Checkstock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateNewClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,7 +91,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="saleswindow.xaml">
+    <Page Include="newsaleswindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
