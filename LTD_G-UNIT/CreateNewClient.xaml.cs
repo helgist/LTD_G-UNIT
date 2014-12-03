@@ -21,26 +21,33 @@ namespace LTD_G_UNIT
     {
 
         ControllerForWindows _controller;
-
+        DatabaseController _databaseController;
+        //METHOD FOR NEW CLIENT
         public CreateNewClient()
         {
              InitializeComponent();
             _controller = new ControllerForWindows();
+            _databaseController = new DatabaseController();
         }
-
+        //METHOD TO SAVE CLIENT INTO DATABASE
         private void SaveBut_Click(object sender, RoutedEventArgs e)
         {
             _controller.newClient();
-        }
-        
-            private void AddClient_Click(object sender, RoutedEventArgs e)
-        {
-            _controller.newClient();
+            _databaseController.AddClient(NameBut.Text, CompanyBut.Text ,AddressBut.Text,int.Parse (PhoneBut.Text),int.Parse(MobileBut.Text));
             NameBut.Text = "";
             CompanyBut.Text = "";
             PhoneBut.Text = "";
             AddressBut.Text = "";
-            MobileBut.Text="";
+            MobileBut.Text = "";
+            
+            MessageBox.Show("Client created");
+
+        }
+        
+            private void AddClient_Click(object sender, RoutedEventArgs e)
+        {
+           
+         
         }
         }
     }

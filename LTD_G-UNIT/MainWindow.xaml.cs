@@ -31,9 +31,9 @@ namespace LTD_G_UNIT
         {
            
             InitializeComponent();
-            Notification.Text = "";
+            ListBox.Items.Clear();
             AddText.Text = "";
-            Notification.IsReadOnly = true;
+          
             _controller = new ControllerForWindows();
         }
        
@@ -44,7 +44,8 @@ namespace LTD_G_UNIT
         {
             DateTime dt = DateTime.Now;
             _controller.SaveNotification(AddText.Text + " \n " + dt);
-            Notification.Text = _controller.DataToDisplay();
+            ListBox.Items.Add(AddText.Text + " \n " + dt);
+           
             AddText.Text = " ";  
         }
         //HOME BUTTON
@@ -58,14 +59,7 @@ namespace LTD_G_UNIT
         {
             this.Close();
         }
-        //Change the cancel button to clear
-        private void ClearButton_Click(object sender, RoutedEventArgs e)
-        {
-            Notification.Clear();
-            _controller.ClearData();
-          
-        }
-
+        
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             newsaleswindow s1 = new newsaleswindow();
@@ -84,6 +78,16 @@ namespace LTD_G_UNIT
         private void AddClient_Click(object sender, RoutedEventArgs e)
         {
             cre.Show();
+        }
+        //Change the cancel button to clear
+        private void ClearButton_Click_1(object sender, RoutedEventArgs e)
+        {
+           // Notification.Clear();
+           
+        
+            ListBox.Items.RemoveAt(ListBox.Items.Count-1);
+            _controller.ClearData();
+        
         }
 
         
