@@ -137,11 +137,14 @@ namespace LTD_G_UNIT
                     SqlCommand cmd = new SqlCommand("getstock", Conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    _checker = new Checkstock();
 
                    SqlDataReader rdr = cmd.ExecuteReader();
                    while (rdr.HasRows && rdr.Read())
                         {
+
                             
+
                             _checker.listboxstock.Items.Add("Product: " + rdr["Grade"] + " - In stock; " + rdr["Quantity"] + "  Price: " + rdr["prise"]);
                        
                         }

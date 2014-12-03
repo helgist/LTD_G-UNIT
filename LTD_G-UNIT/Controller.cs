@@ -56,12 +56,12 @@ namespace LTD_G_UNIT
 
              
             //price of the order
-            int ans;
-            foreach (var quant in Productlist)
-            {
+            //int ans;
+            //foreach (var quant in Productlist)
+            //{
 
-                (quant * price) + ans;
-            }
+            //    (quant * price) + ans;
+            //}
 
 
         }

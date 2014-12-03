@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LTD_G_UNIT.MainWindow"
        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="500" Width="700">
+        Title="MainWindow" Height="400" Width="700">
     <Grid Margin="0,0,2,-21">
         <Button Name="SaveButton1" Content="Save Notification" HorizontalAlignment="Left" Margin="365,75,0,0" VerticalAlignment="Top" Width="116" Click="SaveButton1_Click"/>
         <Button Name="AddButton" Content="Create new order" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="140" Click="AddButton_Click"/>
@@ -10,6 +10,7 @@
         <Button Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="140" Click="ExitButton_Click"/>
         <TextBox Name="Notification" HorizontalAlignment="Left" Height="151" Margin="489,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="175"/>
         <TextBox Name="AddText" HorizontalAlignment="Left" Height="23" Margin="365,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="70" Width="336"/>
 
     </Grid>
 </Window>
