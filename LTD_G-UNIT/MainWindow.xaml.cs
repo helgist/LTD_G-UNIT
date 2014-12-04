@@ -80,9 +80,10 @@ namespace LTD_G_UNIT
             
         }
         //OPEN NEW WINDOW FOR CREATE  NEW CLIENT
-        CreateNewClient cre = new CreateNewClient();
+       
         private void AddClient_Click(object sender, RoutedEventArgs e)
         {
+            CreateNewClient cre = new CreateNewClient();
             cre.Show();
         }
 
