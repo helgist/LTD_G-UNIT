@@ -11,7 +11,7 @@ namespace LTD_G_UNIT
     class DatabaseController
     {
         //hello helgi
-        Product _product ;
+        //Product _product ;
         Checkstock _checker;
         
         public void AddItemsToInventory(string type, int addtostock)
