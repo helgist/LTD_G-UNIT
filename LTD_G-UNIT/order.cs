@@ -9,6 +9,7 @@ namespace LTD_G_UNIT
     class order
 
     {
+        //
          public costumer costomer1 { get; set; }        
          public List<Product> Productlist { get; set; }
          public double price { get; set; }
