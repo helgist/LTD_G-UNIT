@@ -67,6 +67,9 @@
       <DependentUpon>newsaleswindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="order.cs" />
+    <Compile Include="PlanProductionWindow.xaml.cs">
+      <DependentUpon>PlanProductionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="updatestockWindow.xaml.cs">
       <DependentUpon>updatestockWindow.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="newsaleswindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlanProductionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

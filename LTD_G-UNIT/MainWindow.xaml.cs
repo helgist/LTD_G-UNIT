@@ -91,6 +91,12 @@ namespace LTD_G_UNIT
         
         }
 
+        private void PlanProduction_Click(object sender, RoutedEventArgs e)
+        {
+            PlanProduction plan = new PlanProduction();
+            plan.Show();
+        }
+
         
 
        

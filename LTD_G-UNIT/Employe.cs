@@ -9,9 +9,9 @@ namespace LTD_G_UNIT
     class Employe
     {
 
-        string name { get; set;  }
-        int day { get; set; }
-        int orderNR { get; set; }
+       public string name { get; set;  }
+       public int day { get; set; }
+       public int orderNR { get; set; }
 
     }
 }
