@@ -8,12 +8,23 @@ namespace LTD_G_UNIT
 {
     class Controller
     {
+
+
         Product ProdX;
         DatabaseController _Databasecontroller;
 
         //list of our orders
         List<order> _orderlist;
 
+        //list of employes, when they are avalible and what project they are working on(Order ID number)
+        List<Employe> _employelist;
+        public Controller()
+        {
+            _orderlist = new List<order>();
+            _employelist = new List<Employe>();
+            Employedata();
+            
+        }
         
 
         //This method adds to inventory in database
@@ -70,6 +81,9 @@ namespace LTD_G_UNIT
 
         }
     
-        
+        public void Employedata()
+        {
+
+        }
     }
 }

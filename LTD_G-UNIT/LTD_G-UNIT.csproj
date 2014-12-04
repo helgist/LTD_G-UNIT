@@ -62,6 +62,7 @@
     <Compile Include="CreateNewClient.xaml.cs">
       <DependentUpon>CreateNewClient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Employe.cs" />
     <Compile Include="newsaleswindow.xaml.cs">
       <DependentUpon>newsaleswindow.xaml</DependentUpon>
     </Compile>
