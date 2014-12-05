@@ -10,7 +10,7 @@ namespace LTD_G_UNIT
 {
     class DatabaseController
     {
-        //hello helgi
+        //hello helgi.
         //Product _product ;
         Checkstock _checker;
         
