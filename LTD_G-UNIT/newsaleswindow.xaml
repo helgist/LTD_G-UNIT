@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LTD_G_UNIT.newsaleswindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="newsaleswindow" Height="400" Width="600">
+        Title="newsaleswindow" Height="400" Width="600" Background="#FFD4D4D4" BorderBrush="#FFFFFCFC" Foreground="Black">
     <Grid>
 
         <Label Content="                           Sale Sheed " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,10,0,0" Width="349" FontWeight="Bold" Height="38" FontSize="16"/>
@@ -178,8 +178,10 @@
         <Label Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,133,0,0" Width="47"/>
         <Button Content="Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="461,324,0,0" Click="Button_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="381,324,0,0"/>
-        <TextBox Name="Deliverydate" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,164,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <Label Content="Delivery day" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,161,0,0" Width="76"/>
+        <TextBox Name="Deliverydate" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,195,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <Label Content="Delivery day" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,191,0,0" Width="76"/>
+        <Label Content="Company" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,161,0,0"/>
+        <TextBox Name="Company" HorizontalAlignment="Left" Height="18" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,165,0,0"/>
 
 
     </Grid>

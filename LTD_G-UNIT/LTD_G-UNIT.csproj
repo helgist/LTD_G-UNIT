@@ -62,25 +62,25 @@
     <Compile Include="CreateNewClient.xaml.cs">
       <DependentUpon>CreateNewClient.xaml</DependentUpon>
     </Compile>
-    <Compile Include="invoice.xaml.cs">
-      <DependentUpon>invoice.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Employe.cs" />
     <Compile Include="newsaleswindow.xaml.cs">
       <DependentUpon>newsaleswindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="order.cs" />
+    <Compile Include="PlanProductionWindow.xaml.cs">
+      <DependentUpon>PlanProductionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="updatestockWindow.xaml.cs">
       <DependentUpon>updatestockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="invoic.xaml.cs">
+      <DependentUpon>invoic.xaml</DependentUpon>
     </Compile>
     <Page Include="Checkstock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateNewClient.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="invoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,7 +102,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PlanProductionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="updatestockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="invoic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

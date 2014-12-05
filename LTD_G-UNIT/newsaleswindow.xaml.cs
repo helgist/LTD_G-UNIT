@@ -28,7 +28,7 @@ namespace LTD_G_UNIT
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            invoice inv = new invoice();
+            invoic inv = new invoic();
             inv.Show();
             Controller _Controller = new Controller();
             List<Product> productlist = new List<Product>();

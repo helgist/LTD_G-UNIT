@@ -73,7 +73,7 @@ namespace LTD_G_UNIT
             chk.Show();
             
         }
-        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT
+        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT 
        
         private void AddClient_Click(object sender, RoutedEventArgs e)
         {
@@ -91,14 +91,10 @@ namespace LTD_G_UNIT
         
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void PlanProduction_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void AddText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            PlanProduction plan = new PlanProduction();
+            plan.Show();
         }
 
         
