@@ -11,7 +11,7 @@ namespace LTD_G_UNIT
     class DatabaseController
     {
         //hello helgi
-        Product _product ;
+        //Product _product ;
         Checkstock _checker;
         
         public void AddItemsToInventory(string type, int addtostock)
@@ -122,6 +122,40 @@ namespace LTD_G_UNIT
 
 
             }
+        //CONNECT NEW CLIENT TO THE DATABASE
+        public void AddClient(string Name,string CompanyName , string Address1,int Phone, int MobilePhone)
+        {
+            SqlConnection Conn = new SqlConnection(
+                                                  "Server=ealdb1.eal.local;" +
+                                                  "Database=EJL20_DB;" +
+                                                  "User ID=ejl20_usr;" +
+                                                  "Password=Baz1nga20;");
+            try
+            {
+                Conn.Open();
+                SqlCommand cmd = new SqlCommand("Insertclient", Conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@Name", Name));
+                cmd.Parameters.Add(new SqlParameter("@CompanyName", CompanyName));
+                cmd.Parameters.Add(new SqlParameter("@Address1", Address1));
+                cmd.Parameters.Add(new SqlParameter("@Phone", Phone));
+                cmd.Parameters.Add(new SqlParameter("@MobilePhone", MobilePhone));
+
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine("SQL conection error " + e.Message);
+            }
+            finally
+            {
+                Conn.Close();
+                Conn.Dispose();
+            }
+        }
 
         public void seestock()
         {

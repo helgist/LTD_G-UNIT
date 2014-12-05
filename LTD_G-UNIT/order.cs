@@ -9,6 +9,7 @@ namespace LTD_G_UNIT
     class order
 
     {
+        //
          public costumer costomer1 { get; set; }        
          public List<Product> Productlist { get; set; }
          public double price { get; set; }
@@ -17,14 +18,13 @@ namespace LTD_G_UNIT
          public int orderid {get; set;}
          
 
-         private static int newID ;
+         private static int newID = 1100 ;
 
-    public void createorderid()
+         public  order()
     {
         newID = newID +1;
         orderid = newID;
 
-       
     }
     
     }

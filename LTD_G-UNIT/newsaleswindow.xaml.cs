@@ -238,8 +238,8 @@ namespace LTD_G_UNIT
                             productlist.Add(product15);
                         }
                             //price of the order
-                         
-                          _Controller.createnewOrder(name.Text, Phone.Text, Address.Text, productlist, Deliverydate.Text);
+
+                          _Controller.createnewOrder(name.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text);
 
                    
         }

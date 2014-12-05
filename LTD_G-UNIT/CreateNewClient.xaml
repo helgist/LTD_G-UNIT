@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LTD_G_UNIT.CreateNewClient"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="CreateNewClient" Height="300" Width="500">
+        Title="CreateNewClient" Height="300" Width="500" Background="#FFD4D4D4" BorderBrush="#FFFFFCFC" Foreground="Black">
     <Grid>
         <TextBox Name="NameBut" HorizontalAlignment="Left" Height="23" Margin="129,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="CompanyBut" HorizontalAlignment="Left" Height="23" Margin="129,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
