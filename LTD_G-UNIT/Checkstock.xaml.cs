@@ -62,5 +62,10 @@ namespace LTD_G_UNIT
                 }  
            
         }
+
+        private void listboxstock_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -91,6 +91,16 @@ namespace LTD_G_UNIT
         
         }
 
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void AddText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         
 
        

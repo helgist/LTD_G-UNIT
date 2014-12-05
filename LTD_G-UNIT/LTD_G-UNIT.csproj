@@ -62,6 +62,9 @@
     <Compile Include="CreateNewClient.xaml.cs">
       <DependentUpon>CreateNewClient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="invoice.xaml.cs">
+      <DependentUpon>invoice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="newsaleswindow.xaml.cs">
       <DependentUpon>newsaleswindow.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateNewClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="invoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
