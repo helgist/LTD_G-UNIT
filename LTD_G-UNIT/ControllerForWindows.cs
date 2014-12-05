@@ -13,7 +13,7 @@ namespace LTD_G_UNIT
 
       
 
-        //lIST FOR CLIENTS CLASS
+        //lIST FOR CLIENTS CLASS 
         List<Client> _clientlist;
 
         //Method for clear Data
