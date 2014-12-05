@@ -73,7 +73,7 @@ namespace LTD_G_UNIT
             chk.Show();
             
         }
-        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT
+        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT 
        
         private void AddClient_Click(object sender, RoutedEventArgs e)
         {
