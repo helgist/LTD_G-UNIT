@@ -14,15 +14,15 @@ namespace LTD_G_UNIT
         DatabaseController _Databasecontroller;
 
         //list of our orders
-        public List<order> _orderlist;
+        public List<order> _orderlist = new List<order>();
 
         //list of employes, when they are avalible and what project they are working on(Order ID number)
-        public List<Employe> _employelist;
+        public List<Employe> _employelist = new List<Employe>();
 
         public Controller()
         {
-             _orderlist = new List<order>();
-            _employelist = new List<Employe>();
+
+
             Employedata();
             Orderdatatolist();
             
@@ -86,25 +86,25 @@ namespace LTD_G_UNIT
 
             Employe employe2 = new Employe();
             employe2.name = "Lars";
-            employe2.day = 0;
+            employe2.day = 9;
             employe2.orderNR = 0;
             _employelist.Add(employe2);
 
             Employe employe3 = new Employe();
             employe3.name = "Jakob";
-            employe3.day = 0;
+            employe3.day = 5;
             employe3.orderNR = 0;
             _employelist.Add(employe3);
 
             Employe employe4 = new Employe();
             employe4.name = "Helgi";
-            employe4.day = 0;
+            employe4.day = 5;
             employe4.orderNR = 0;
             _employelist.Add(employe4);
 
             Employe employe5 = new Employe();
             employe5.name = "Kim";
-            employe5.day = 0;
+            employe5.day = 3;
             employe5.orderNR = 0;
             _employelist.Add(employe5);
 
@@ -169,9 +169,9 @@ namespace LTD_G_UNIT
 
             costumer newcostumer = new costumer();
             List<Product> Productlist = new List<Product>();
-            Product product1 = new Product("type1", 8 , 2300);
-            Product product2 = new Product("type6", 32, 2300);
-            Product product3 = new Product("type12", 11, 2300);
+            Product product1 = new Product("type 1", 8 , 2300);
+            Product product2 = new Product("type 6", 32, 2300);
+            Product product3 = new Product("type 12", 11, 2300);
             Productlist.Add(product1);
             Productlist.Add(product2);
             Productlist.Add(product3);
@@ -185,16 +185,16 @@ namespace LTD_G_UNIT
             Order2.costomer1 = newcostumer;
             Order2.dateoforder = DateTime.Now;
             Order2.Productlist = Productlist;
-            Order2.deliverydate = "15,12,2014" ;
+            Order2.deliverydate = "15-12-2014" ;
             
 
             _orderlist.Add(Order2);
 
             costumer newcostumer2 = new costumer();
             List<Product> Productlist2 = new List<Product>();
-            Product product4 = new Product("type1", 8, 2300);
-            Product product5 = new Product("type6", 32, 2300);
-            Product product6 = new Product("type12", 11, 2300);
+            Product product4 = new Product("type 3", 8, 2300);
+            Product product5 = new Product("type 8", 32, 2300);
+            Product product6 = new Product("type 14", 11, 2300);
             Productlist2.Add(product4);
             Productlist2.Add(product5);
             Productlist2.Add(product6);
@@ -208,7 +208,7 @@ namespace LTD_G_UNIT
             Order3.costomer1 = newcostumer;
             Order3.dateoforder = DateTime.Now;
             Order3.Productlist = Productlist;
-            Order3.deliverydate = "12,01,2015";
+            Order3.deliverydate = "12-01-2015";
 
             _orderlist.Add(Order3);
         }

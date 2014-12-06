@@ -241,7 +241,7 @@ namespace LTD_G_UNIT
 
                           _Controller.createnewOrder(name.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text);
 
-                   
+                          this.Close();
         }
     }
 }

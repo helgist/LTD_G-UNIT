@@ -32,14 +32,23 @@ namespace LTD_G_UNIT
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
         {
-            foreach(Employe emp in _Controler._employelist)
+            //here I sort the list to make the employe with lowest days to avaleble be highest
+            List<Employe> SortedList = _Controler._employelist.OrderBy(o => o.day).ToList();
+
+            foreach (Employe emp in SortedList)
             {
+               
                 Employelistbox.Items.Add(emp.name + "\n" + "available in " + emp.day + " Days");
             }
+
             foreach (order p in _Controler._orderlist)
             {
-                
-                Orderlistbox.Items.Add("Order ID " + p.orderid + " Order date " + p.dateoforder  );
+                Orderlistbox.Items.Add("Order ID: " + p.orderid + "  Order date: " + p.dateoforder +  "\nDelivery date: " + p.deliverydate);
+
+                foreach (var item in p.Productlist)
+                {
+                    Orderlistbox.Items.Add(item.quant + " Pices of " + item.type);
+                }
             }
         }
     }
