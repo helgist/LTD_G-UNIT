@@ -12,7 +12,6 @@
         <Label Content="Order ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,109,0,0" Width="62" FontWeight="Bold"/>
         <Label Content="Est work days" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,194,0,0" Width="88" FontWeight="Bold"/>
         <Label Content="Employe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,151,0,0" Width="62" FontWeight="Bold"/>
-        <Button Name="Comfirm" Content="Comfirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="372,238,0,0"/>
         <ListBox Name="Orderlistbox" HorizontalAlignment="Left" Height="344" VerticalAlignment="Top" Width="282" Margin="24,38,0,0" SelectionChanged="ListBox_SelectionChanged"/>
         <ListBox Name="Employelistbox" HorizontalAlignment="Left" Height="344" VerticalAlignment="Top" Width="152" Margin="498,38,0,0"/>
         <Button Name="Refresh" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="205,10,0,0" Click="Refresh_Click"/>

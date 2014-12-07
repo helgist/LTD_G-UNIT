@@ -23,8 +23,8 @@ namespace LTD_G_UNIT
         {
 
 
-            Employedata();
-            Orderdatatolist();
+            //Employedata();
+            //Orderdatatolist();
             
         }
         
@@ -53,22 +53,27 @@ namespace LTD_G_UNIT
         }
 
         //this method creates new order
-        public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery)
+        public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery, int totalprice)
         {
+            
+
             costumer newcostumer = new costumer();
+            
 
             newcostumer.Company = company;
             newcostumer.Name = name;
             newcostumer.Telephon = telphon;
             newcostumer.Adress = adress;
 
-            order Order1 = new order();
-            Order1.costomer1 = newcostumer;
-            Order1.dateoforder = DateTime.Now;
-            Order1.Productlist = Productlist;
-            Order1.deliverydate = delivery;
+            order Order5 = new order();
+            Order5.costomer1 = newcostumer;
+            Order5.dateoforder = DateTime.Now;
+            Order5.Productlist = Productlist;
+            Order5.deliverydate = delivery;
+            Order5.price = totalprice;
 
-            _orderlist.Add(Order1);
+            _orderlist.Add(Order5);
+            
 
 
 

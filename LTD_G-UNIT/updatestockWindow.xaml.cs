@@ -154,6 +154,7 @@ namespace LTD_G_UNIT
 
             }
             //finaly close the window
+            MessageBox.Show("order has been added");
             this.Close(); 
         }
     }

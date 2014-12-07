@@ -13,6 +13,15 @@ namespace LTD_G_UNIT
         public string Address { get; set; }
         public int Phone { get; set; }
         public int MobilePhone { get; set; }
+        public int CostumerID { get; set; }
+
+        private static int newID = 3100;
+        public Client()
+    {
+        newID = newID +1;
+        CostumerID = newID;
+
+    }
 
     }
 }

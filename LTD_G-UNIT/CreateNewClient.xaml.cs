@@ -33,7 +33,7 @@ namespace LTD_G_UNIT
         private void SaveBut_Click(object sender, RoutedEventArgs e)
         {
             _controller.newClient();
-            _databaseController.AddClient(NameBut.Text, CompanyBut.Text ,AddressBut.Text,int.Parse (PhoneBut.Text),int.Parse(MobileBut.Text));
+            _databaseController.AddClient(NameBut.Text, CompanyBut.Text ,AddressBut.Text,int.Parse(PhoneBut.Text),int.Parse(MobileBut.Text));
             NameBut.Text = "";
             CompanyBut.Text = "";
             PhoneBut.Text = "";
@@ -49,6 +49,7 @@ namespace LTD_G_UNIT
            
          
         }
+
         }
     }
 
