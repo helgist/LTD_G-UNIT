@@ -15,13 +15,13 @@ namespace LTD_G_UNIT
         public int MobilePhone { get; set; }
         public int CostumerID { get; set; }
 
-        private static int newID = 3100;
-        public Client()
-    {
-        newID = newID +1;
-        CostumerID = newID;
+        //private static int newID = 3100;
+    //    public Client()
+    //{
+    //    newID = newID +1;
+    //    CostumerID = newID;
 
-    }
+    //}
 
     }
 }

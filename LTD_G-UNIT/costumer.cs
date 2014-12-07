@@ -12,6 +12,7 @@ namespace LTD_G_UNIT
         public string Company { get; set; }
          public string Telephon { get; set; }
          public string Adress { get; set; }
+         public int ID { get; set; }
     
     
     }

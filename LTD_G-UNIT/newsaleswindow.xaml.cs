@@ -20,7 +20,11 @@ namespace LTD_G_UNIT
     public partial class newsaleswindow : Window
     {
         public int totalpric { get; set; }
+
         List<Product> productlist = new List<Product>();
+        ControllerForWindows _contr = new ControllerForWindows();
+        DatabaseController _datacontro = new DatabaseController();
+
         public newsaleswindow()
         {
             InitializeComponent();
@@ -243,10 +247,8 @@ namespace LTD_G_UNIT
             }
            
 
-            _Controller.createnewOrder(name.Text, Phone.Text, Address.Text,Company.Text, productlist, Deliverydate.Text, totalpric);
+            _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text,Company.Text, productlist, Deliverydate.Text, totalpric);
             //this method return the total price of products
-
-
 
             totalpric = 0;
 
@@ -255,6 +257,19 @@ namespace LTD_G_UNIT
                 totalpric += (p.price*p.quant);
             }
 
+        }
+
+        private void FindIfId_Click(object sender, RoutedEventArgs e)
+        {
+            _datacontro.getlistofcostumers(); 
+            
+
+           List<Client> IDsearch = _contr._clientlist.FindAll(delegate(Client m) { return m.CostumerID == int.Parse(IDtextbox.Text); });
+                IDsearch.ForEach(delegate(Client m)
+                {
+                    m.Name = this.namebox.Text;
+                    
+                });
         }
     }
 }

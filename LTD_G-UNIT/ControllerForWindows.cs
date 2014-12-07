@@ -14,7 +14,7 @@ namespace LTD_G_UNIT
       
 
         //lIST FOR CLIENTS CLASS 
-        List<Client> _clientlist;
+        public List<Client> _clientlist = new List<Client>();
 
         //Method for clear Data
         public void ClearData()
@@ -24,7 +24,8 @@ namespace LTD_G_UNIT
         public ControllerForWindows()
         {
             _allData = new List<string>();
-            _clientlist = new List<Client>();
+           
+
         }
 
         public void newClient()

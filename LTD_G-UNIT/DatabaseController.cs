@@ -10,8 +10,7 @@ namespace LTD_G_UNIT
 {
     class DatabaseController
     {
-        //hello helgi.
-        //Product _product ;
+        
         Checkstock _checker;
         
         public void AddItemsToInventory(string type, int addtostock)
@@ -195,6 +194,52 @@ namespace LTD_G_UNIT
                     Conn.Dispose();
                 }  
 
+        }
+
+        public void getlistofcostumers()
+        {
+            SqlConnection Conn = new SqlConnection(
+                                                      "Server=ealdb1.eal.local;" +
+                                                      "Database=EJL20_DB;" +
+                                                      "User ID=ejl20_usr;" +
+                                                      "Password=Baz1nga20;");
+                try
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("select * from db_owner.Client", Conn);
+
+
+                    ControllerForWindows _contr = new ControllerForWindows();
+                    
+
+                   SqlDataReader rdr = cmd.ExecuteReader();
+                   while (rdr.HasRows && rdr.Read())
+                        {
+                            Client Clie = new Client();
+
+                            Clie.Name = rdr["Name"].ToString();
+                            Clie.Phone = Int32.Parse(rdr["Phone"].ToString());
+                            Clie.MobilePhone = Int32.Parse(rdr["MobilePhone"].ToString());
+                            Clie.Address = rdr["Address1"].ToString();
+                            Clie.CompanyName = rdr["CompanyName"].ToString();
+                            Clie.CostumerID = Int32.Parse(rdr["ID"].ToString());
+                            
+                            _contr._clientlist.Add(Clie);
+                        }
+                   
+
+                }
+                catch (SqlException e)
+                {
+                    Console.WriteLine("conection error " + e.Message);
+                }
+
+                finally
+                {
+                    Conn.Close();
+                    Conn.Dispose();
+                }  
         }
     }
 }
