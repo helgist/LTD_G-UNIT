@@ -23,5 +23,22 @@ namespace LTD_G_UNIT
         {
             InitializeComponent();
         }
+        newsaleswindow nsw = new newsaleswindow();
+
+        private void tprice_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            tprice.Text = Convert.ToString(nsw.totalprice());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           // listboxorder.Items.Ad)
+        }
     }
 }
