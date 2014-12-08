@@ -276,7 +276,7 @@ namespace LTD_G_UNIT
             }
 
 
-           _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, Pricelist, Deliverydate.Text, totalpric);
+           _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text);
         }
             //this method return the total price of products
 

@@ -53,7 +53,7 @@ namespace LTD_G_UNIT
         }
 
         //this method creates new order
-        public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery, int totalprice)
+        public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery)
         {
             
 
@@ -70,7 +70,7 @@ namespace LTD_G_UNIT
             Order5.dateoforder = DateTime.Now;
             Order5.Productlist = Productlist;
             Order5.deliverydate = delivery;
-            Order5.price = totalprice;
+          //  Order5.price = totalprice;
 
             _orderlist.Add(Order5);
             
