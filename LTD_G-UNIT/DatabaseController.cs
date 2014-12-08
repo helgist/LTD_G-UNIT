@@ -121,6 +121,7 @@ namespace LTD_G_UNIT
 
 
             }
+
         //CONNECT NEW CLIENT TO THE DATABASE
         public void AddClient(string Name,string CompanyName , string Address1,int Phone, int MobilePhone)
         {
@@ -254,6 +255,109 @@ namespace LTD_G_UNIT
                     Conn.Dispose();
                 }
                 return clientlist;
+        }
+
+        public List<order> getlistoforders()
+        {
+            SqlConnection Conn = new SqlConnection(
+                                                      "Server=ealdb1.eal.local;" +
+                                                      "Database=EJL20_DB;" +
+                                                      "User ID=ejl20_usr;" +
+                                                      "Password=Baz1nga20;");
+            List<order> Orderlist = new List<order>();
+            try
+            {
+                Conn.Open();
+
+                SqlCommand cmd = new SqlCommand("select * from db_owner.Orders", Conn);
+
+
+
+
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.HasRows && rdr.Read())
+                {
+
+                    
+                    costumer newcostumer = new costumer();
+
+                    newcostumer.Company = rdr["company"].ToString();
+                    newcostumer.Name = rdr["name"].ToString();
+                    newcostumer.Telephon = rdr["telephone"].ToString();
+                    newcostumer.Adress = rdr["theaddress"].ToString();
+
+
+                    
+                    order Order = new order();
+                    Order.orderid = Int32.Parse(rdr["orderID"].ToString());
+                    Order.costomer1 = newcostumer;
+                    Order.dateoforder = DateTime.Parse(rdr["dateoforder"].ToString());
+                    Order.deliverydate = rdr["deliverydate"].ToString();
+
+                    Orderlist.Add(Order);
+
+
+                }
+
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine("conection error " + e.Message);
+
+            }
+
+            finally
+            {
+                Conn.Close();
+                Conn.Dispose();
+            }
+            return Orderlist;
+        }
+
+        public List<Product> getlistofproducts()
+        {
+            SqlConnection Conn = new SqlConnection(
+                                                     "Server=ealdb1.eal.local;" +
+                                                     "Database=EJL20_DB;" +
+                                                     "User ID=ejl20_usr;" +
+                                                     "Password=Baz1nga20;");
+            List<Product> Productlist = new List<Product>();
+            try
+            {
+                Conn.Open();
+
+                SqlCommand cmd = new SqlCommand("select * from db_owner.Products", Conn);
+
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.HasRows && rdr.Read())
+                {
+                
+                    int orderID = Int32.Parse(rdr["orderID"].ToString());
+                    int quant = Int32.Parse(rdr["quant"].ToString());
+                    string type = rdr["thetype"].ToString();
+                    Product Product = new Product(quant, orderID, type);
+
+                    Productlist.Add(Product);
+
+                }
+
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine("conection error " + e.Message);
+
+            }
+
+            finally
+            {
+                Conn.Close();
+                Conn.Dispose();
+            }
+            return Productlist;
         }
     }
 }

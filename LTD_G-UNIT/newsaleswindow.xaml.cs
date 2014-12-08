@@ -23,7 +23,8 @@ namespace LTD_G_UNIT
 
         
         List<double> Pricelist = new List<double>();
-        List<Product> productlist = new List<Product>();       
+        List<Product> productlist = new List<Product>();
+        Controller _Controller = new Controller();
 
        
         ControllerForWindows _contr = new ControllerForWindows();
@@ -38,10 +39,7 @@ namespace LTD_G_UNIT
         {
             Window1 wn1 = new Window1();
             wn1.Show();
-            //invoic inv = new invoic();
-            //inv.Show();  
-            Controller _Controller = new Controller();
-            _Controller = new Controller();
+           
             try
             {
                 _Controller.MakeNewSale("type1", int.Parse(type_A.Text), 2300);
@@ -277,6 +275,7 @@ namespace LTD_G_UNIT
 
 
            _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text);
+           this.Close();
         }
             //this method return the total price of products
 
@@ -290,7 +289,7 @@ namespace LTD_G_UNIT
                     
             }
                return totalpric;
-
+               
         }
 
 
@@ -310,8 +309,6 @@ namespace LTD_G_UNIT
                    Address.Text = m.Address;
                    Phone.Text = m.Phone.ToString();
                    Company.Text = m.CompanyName;
-
-
 
                });
            }

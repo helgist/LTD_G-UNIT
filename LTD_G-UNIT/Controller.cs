@@ -10,11 +10,10 @@ namespace LTD_G_UNIT
     {
 
 
-        Product ProdX;
+        
         DatabaseController _Databasecontroller;
 
-        //list of our orders
-        public List<order> _orderlist = new List<order>();
+       
 
         //list of employes, when they are avalible and what project they are working on(Order ID number)
         public List<Employe> _employelist = new List<Employe>();
@@ -22,19 +21,17 @@ namespace LTD_G_UNIT
         public Controller()
         {
 
-
             Employedata();
             Orderdatatolist();
             
         }
         
-
         //This method adds to inventory in database
         public void addToDB(string type, int toadd)
         {
             _Databasecontroller = new DatabaseController();
 
-            ProdX = new Product(type, toadd, 0);
+            Product ProdX = new Product(type, toadd, 0);
 
             _Databasecontroller.AddItemsToInventory(type, toadd);
          
@@ -56,10 +53,8 @@ namespace LTD_G_UNIT
         public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery)
         {
             
-
             costumer newcostumer = new costumer();
             
-
             newcostumer.Company = company;
             newcostumer.Name = name;
             newcostumer.Telephon = telphon;
@@ -73,9 +68,6 @@ namespace LTD_G_UNIT
           //  Order5.price = totalprice;
 
             _orderlist.Add(Order5);
-            
-
-
 
         }
     
@@ -218,5 +210,22 @@ namespace LTD_G_UNIT
             _orderlist.Add(Order3);
         }
 
+        public List<Employe> getemploylist()
+        {
+            
+            return _employelist;
+ 
+        }
+
+        public List<order> getOrderlist()
+        {
+           
+            return _Databasecontroller.getlistoforders();
+
+        }
+        public List<Product> getproductlist()
+        {
+            return _Databasecontroller.getlistofproducts();
+        }
     }
 }
