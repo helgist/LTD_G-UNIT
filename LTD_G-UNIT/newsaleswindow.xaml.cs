@@ -23,7 +23,7 @@ namespace LTD_G_UNIT
 
         List<Product> productlist = new List<Product>();
         ControllerForWindows _contr = new ControllerForWindows();
-        DatabaseController _datacontro = new DatabaseController();
+       
 
         public newsaleswindow()
         {
@@ -42,7 +42,7 @@ namespace LTD_G_UNIT
 
 
 
-            _Controller = new Controller();
+            
             try
             {
                 _Controller.MakeNewSale("type1", int.Parse(type_A.Text), 2300);
@@ -259,17 +259,26 @@ namespace LTD_G_UNIT
 
         }
 
+        //Fill out automaticly the sale sheed after costumer ID
         private void FindIfId_Click(object sender, RoutedEventArgs e)
         {
-            _datacontro.getlistofcostumers(); 
-            
 
-           List<Client> IDsearch = _contr._clientlist.FindAll(delegate(Client m) { return m.CostumerID == int.Parse(IDtextbox.Text); });
+
+             List<Client> Clielist = _contr.getclientlist();
+
+
+
+             List<Client> IDsearch = Clielist.FindAll(delegate(Client m) { return m.CostumerID == int.Parse(IDtextbox.Text); });
                 IDsearch.ForEach(delegate(Client m)
                 {
-                    m.Name = this.namebox.Text;
+                   namebox.Text=m.Name;
+                   Address.Text = m.Address;
+                   Phone.Text = m.Phone.ToString();
+                   Company.Text = m.CompanyName;
+
+
                     
-                });
+               });
         }
     }
 }

@@ -196,13 +196,14 @@ namespace LTD_G_UNIT
 
         }
 
-        public void getlistofcostumers()
+        public List<Client> getlistofcostumers()
         {
             SqlConnection Conn = new SqlConnection(
                                                       "Server=ealdb1.eal.local;" +
                                                       "Database=EJL20_DB;" +
                                                       "User ID=ejl20_usr;" +
                                                       "Password=Baz1nga20;");
+            List<Client> clientlist = new List<Client>();
                 try
                 {
                     Conn.Open();
@@ -210,22 +211,33 @@ namespace LTD_G_UNIT
                     SqlCommand cmd = new SqlCommand("select * from db_owner.Client", Conn);
 
 
-                    ControllerForWindows _contr = new ControllerForWindows();
+                   
                     
 
                    SqlDataReader rdr = cmd.ExecuteReader();
                    while (rdr.HasRows && rdr.Read())
                         {
-                            Client Clie = new Client();
+                           
 
-                            Clie.Name = rdr["Name"].ToString();
-                            Clie.Phone = Int32.Parse(rdr["Phone"].ToString());
-                            Clie.MobilePhone = Int32.Parse(rdr["MobilePhone"].ToString());
-                            Clie.Address = rdr["Address1"].ToString();
-                            Clie.CompanyName = rdr["CompanyName"].ToString();
-                            Clie.CostumerID = Int32.Parse(rdr["ID"].ToString());
-                            
-                            _contr._clientlist.Add(Clie);
+                            string Name = rdr["Name"].ToString();
+                            int Phone = Int32.Parse(rdr["Phone"].ToString());
+                            int MobilePhone = Int32.Parse(rdr["MobilePhone"].ToString());
+                            string Address = rdr["Address1"].ToString();
+                            string CompanyName = rdr["CompanyName"].ToString();
+                            int CostumerID = Int32.Parse(rdr["ID"].ToString());
+                            Client clie = new Client();
+
+                            clie.Name = Name;
+                            clie.Phone = Phone;
+                            clie.MobilePhone = MobilePhone;
+                            clie.Address = Address;
+                            clie.CompanyName = CompanyName;
+                            clie.CostumerID = CostumerID;
+
+
+                            clientlist.Add(clie);
+
+
                         }
                    
 
@@ -233,13 +245,15 @@ namespace LTD_G_UNIT
                 catch (SqlException e)
                 {
                     Console.WriteLine("conection error " + e.Message);
+                   
                 }
 
                 finally
                 {
                     Conn.Close();
                     Conn.Dispose();
-                }  
+                }
+                return clientlist;
         }
     }
 }

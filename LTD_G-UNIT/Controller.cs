@@ -22,9 +22,9 @@ namespace LTD_G_UNIT
         public Controller()
         {
 
-           
-            //Employedata();
-            //Orderdatatolist();
+
+            Employedata();
+            Orderdatatolist();
             
         }
         

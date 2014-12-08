@@ -38,7 +38,7 @@ namespace LTD_G_UNIT
             foreach (Employe emp in SortedList)
             {
                
-                Employelistbox.Items.Add(emp.name + "\n" + "available in " + emp.day + " Days");
+                Employelistbox.Items.Add(emp.name + "\n" + "available after " + emp.day + " Days");
             }
 
             foreach (order p in _Controler._orderlist)
