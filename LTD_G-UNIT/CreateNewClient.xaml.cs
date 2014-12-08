@@ -44,11 +44,7 @@ namespace LTD_G_UNIT
 
         }
         
-            private void AddClient_Click(object sender, RoutedEventArgs e)
-        {
-           
-         
-        }
+     
 
         }
     }
