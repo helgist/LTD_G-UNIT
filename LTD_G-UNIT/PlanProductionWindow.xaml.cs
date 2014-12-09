@@ -65,7 +65,10 @@ namespace LTD_G_UNIT
 
             _Controler.assignemployetoorder(Employe, Orderid);
             _Controler.Addworkingdaystoemploye(days, Employe);
+
             MessageBox.Show("You have assingned " + Employe + "\nTo Order " + Orderid + "\nfor " + days + " days");
+
+             
         }
 
       
