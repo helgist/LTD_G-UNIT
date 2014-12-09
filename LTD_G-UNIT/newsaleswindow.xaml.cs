@@ -305,10 +305,12 @@ namespace LTD_G_UNIT
                 wn1.listboxorder.Items.Add(p.type + " Qantity " + p.quant);
             }
             wn1.Show();
-            _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text);
-        }
-        //this method return the total price of products?mnmmvv
 
+
+            _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text, int.Parse(IDtextbox.Text));
+            this.Close();
+        }
+        //this method return the total price of products
         public int totalprice()
         {
             int totalpric = 0;

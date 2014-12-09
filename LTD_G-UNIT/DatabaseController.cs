@@ -77,36 +77,65 @@ namespace LTD_G_UNIT
             }
 
         }
-        //This can be removed if there is no refrences when we hand in!!!!!
-        public void CalculatePrice(string type)
+        //this inserts into product table
+        public void insertProductsToOrder(int orderID, string thetype, int quant)
+        {
+            SqlConnection Conn = new SqlConnection(
+                                                  "Server=ealdb1.eal.local;" +
+                                                  "Database=EJL20_DB;" +
+                                                  "User ID=ejl20_usr;" +
+                                                  "Password=Baz1nga20;");
+            try
+            {
+                Conn.Open();
+                SqlCommand cmd = new SqlCommand("insertProductsToOrder", Conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@orderID", orderID));
+                cmd.Parameters.Add(new SqlParameter("@thetype", thetype));
+                cmd.Parameters.Add(new SqlParameter("@quant", quant));
+             
+
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine("SQL conection error " + e.Message);
+            }
+            finally
+            {
+                Conn.Close();
+                Conn.Dispose();
+            }
+        }
+        //this inserts into order table
+        public void CreateNewOrder(int orderID, string name, string Company, string telephone, string address, int costumerID , DateTime orderdate ,  string deliverydate)
             {
                 SqlConnection Conn = new SqlConnection(
-                                                      "Server=ealdb1.eal.local;" +
-                                                      "Database=EJL20_DB;" +
-                                                      "User ID=ejl20_usr;" +
-                                                      "Password=Baz1nga20;");
+                                                   "Server=ealdb1.eal.local;" +
+                                                   "Database=EJL20_DB;" +
+                                                   "User ID=ejl20_usr;" +
+                                                   "Password=Baz1nga20;");
                 try
                 {
                     Conn.Open();
+                    SqlCommand cmd = new SqlCommand("CreateNewOrder", Conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    SqlCommand cmd = new SqlCommand("getprice", Conn);
-                    cmd.Parameters.Add(new SqlParameter("@Grade", type));
+                    cmd.Parameters.Add(new SqlParameter("@orderID", orderID));
+                    cmd.Parameters.Add(new SqlParameter("@name",name));
+                    cmd.Parameters.Add(new SqlParameter("@Company",Company));
+                    cmd.Parameters.Add(new SqlParameter("@telephone",telephone));
+                    cmd.Parameters.Add(new SqlParameter("@theaddress", address));
+                    cmd.Parameters.Add(new SqlParameter("@costumerID", costumerID));
+                    cmd.Parameters.Add(new SqlParameter("@dateoforder", orderdate));
+                    cmd.Parameters.Add(new SqlParameter("@deliverydate", deliverydate));
+                    cmd.Parameters.Add(new SqlParameter("@employe", ""));
 
-                    SqlDataReader getprice = cmd.ExecuteReader();
 
-                    if (getprice.HasRows)
-                    {
-                        while (getprice.Read())
-                        {
-                            Console.WriteLine("{0}", getprice.GetInt32(0),
-                                getprice.GetString(1));
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("No Price found.");
-                    }
-                    getprice.Close();
+                    cmd.ExecuteNonQuery();
 
                 }
                 catch (SqlException e)
@@ -118,7 +147,6 @@ namespace LTD_G_UNIT
                     Conn.Close();
                     Conn.Dispose();
                 }
-
 
             }
         //CONNECT NEW CLIENT TO THE DATABASE
