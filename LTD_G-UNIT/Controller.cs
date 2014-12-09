@@ -40,7 +40,7 @@ namespace LTD_G_UNIT
         }
 
         //this method creates new order
-        public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery)
+        public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery, int costumerID)
         {
             
             costumer newcostumer = new costumer();
@@ -55,8 +55,19 @@ namespace LTD_G_UNIT
             Order5.dateoforder = DateTime.Now;
             Order5.Productlist = Productlist;
             Order5.deliverydate = delivery;
-          //  Order5.price = totalprice;
 
+            Random rnd = new Random();
+            int orderID = rnd.Next(0001, 9999);
+            
+
+            _Databasecontroller.CreateNewOrder(orderID, name, company, telphon, adress, costumerID, DateTime.Now, delivery);
+
+            foreach(Product P in Productlist)
+            {
+                string type = P.type;
+                int quant = P.quant;
+                _Databasecontroller.insertProductsToOrder(orderID, type, quant);
+            }
             
 
         }
