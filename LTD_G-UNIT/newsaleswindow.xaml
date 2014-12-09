@@ -176,7 +176,7 @@
         <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,102,0,0" Width="47"/>
         <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,131,0,0"/>
         <Label Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,161,0,0" Width="47"/>
-        <Button Content="Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="461,324,0,0" Click="Button_Click"/>
+        <Button Content="Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="475,324,0,0" Click="Button_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="381,324,0,0" Click="Button_Click_1"/>
         <TextBox Name="Deliverydate" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="80,225,0,0" RenderTransformOrigin="0.613,0.526"/>
         <Label Content="Delivery day" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,221,0,0" Width="76"/>
