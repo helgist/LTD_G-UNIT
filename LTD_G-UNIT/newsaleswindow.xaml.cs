@@ -326,7 +326,7 @@ namespace LTD_G_UNIT
 
 
         //Fill out automaticly the sale sheed after costumer ID
-    /*    private void FindIfId_Click(object sender, RoutedEventArgs e)
+        private void FindIfId_Click(object sender, RoutedEventArgs e)
         {
 
 
@@ -344,7 +344,7 @@ namespace LTD_G_UNIT
 
             });
         }
-    */
+    
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
