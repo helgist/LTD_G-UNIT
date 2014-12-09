@@ -154,7 +154,8 @@ namespace LTD_G_UNIT
 
             }
             //finaly close the window
-            MessageBox.Show("order has been added");
+            // I change the message 
+            MessageBox.Show("Stock has been updated");
             this.Close(); 
         }
     }
