@@ -19,16 +19,21 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        newsaleswindow _nsw;
+        public Window1(newsaleswindow nsw)
         {
             InitializeComponent();
+
+            _nsw = nsw;
+
+            tprice.Text = Convert.ToString(_nsw.totalprice());
         }
-        newsaleswindow nsw = new newsaleswindow();
+        //newsaleswindow nsw = new newsaleswindow();
 
         private void tprice_TextChanged(object sender, TextChangedEventArgs e)
         {
             
-            tprice.Text = Convert.ToString(nsw.totalprice());
+            //tprice.Text = Convert.ToString(nsw.totalprice());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
