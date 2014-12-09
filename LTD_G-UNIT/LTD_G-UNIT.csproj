@@ -57,6 +57,9 @@
       <DependentUpon>Checkstock.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs" />
+    <Compile Include="ClietnsInfo.xaml.cs">
+      <DependentUpon>ClietnsInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControllerForWindows.cs" />
     <Compile Include="costumer.cs" />
     <Compile Include="CreateNewClient.xaml.cs">
@@ -77,6 +80,10 @@
       <DependentUpon>invoic.xaml</DependentUpon>
     </Compile>
     <Page Include="Checkstock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClietnsInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
