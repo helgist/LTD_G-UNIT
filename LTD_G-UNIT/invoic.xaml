@@ -4,7 +4,7 @@
         Title="Window1" Height="400" Width="500">
     <Grid>
         <Label Content=" totalprice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,314,0,0"/>
-        <TextBox  Name="tprice" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Margin="119,314,0,0" TextChanged="tprice_TextChanged"/>
+        <TextBox  Name="tprice" IsReadOnly="True" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Margin="119,314,0,0" TextChanged="tprice_TextChanged"/>
         <ListBox Name="listboxorder" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="366" Margin="33,20,0,0" SelectionChanged="ListBox_SelectionChanged"/>
         <Button Content="cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="396,320,0,0" Click="Button_Click"/>
 
