@@ -307,7 +307,7 @@ namespace LTD_G_UNIT
             wn1.Show();
             _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, productlist, Deliverydate.Text);
         }
-        //this method return the total price of products?mnmm
+        //this method return the total price of products?mnmmvv
 
         public int totalprice()
         {
