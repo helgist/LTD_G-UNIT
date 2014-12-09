@@ -15,6 +15,7 @@
         <ListBox Name="Orderlistbox" HorizontalAlignment="Left" Height="344" VerticalAlignment="Top" Width="282" Margin="24,38,0,0" SelectionChanged="ListBox_SelectionChanged"/>
         <ListBox Name="Employelistbox" HorizontalAlignment="Left" Height="344" VerticalAlignment="Top" Width="152" Margin="498,38,0,0"/>
         <Button Name="Refresh" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="205,10,0,0" Click="Refresh_Click"/>
+        <Button Content="Comfirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" Margin="399,236,0,0" Click="Button_Click"/>
 
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ namespace LTD_G_UNIT
         public string type { get; set; }
         public int quant { get; set; }
         public int price { get; set; }
+        public int orderID { get; set; }
 
         public Product(string type, int quant, int price)
         {
@@ -21,6 +22,13 @@ namespace LTD_G_UNIT
             
         }
 
+        public Product(int quant, int orderID, string type)
+        {
+            this.type = type;
+            this.quant = quant;
+            this.orderID = orderID;
+
+        }
         
     }
 }
