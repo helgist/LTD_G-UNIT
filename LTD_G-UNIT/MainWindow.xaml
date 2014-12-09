@@ -7,13 +7,14 @@
         <Button Name="AddButton" Content="Create new order" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="164" Click="AddButton_Click"/>
         <Button Name="UpdateButton" Content="Update Database" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="164" Click="UpdateButton_Click"/>
         <Button Name="CheckButton" Content="Check Stock" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="164" Click="CheckButton_Click"/>
-        <Button Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="164" Click="ExitButton_Click"/>
+        <Button Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="164" Click="ExitButton_Click"/>
         <TextBox Name="AddText" HorizontalAlignment="Left" Height="23" Margin="365,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
         <Button Name="AddClient" Content="Add new client" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="164" Click="AddClient_Click" Cursor="None"/>
         <Button Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Margin="425,100,0,0" VerticalAlignment="Top" Width="56" Click="ClearButton_Click_1"/>
         <ListBox Name="ListBox" HorizontalAlignment="Left" Height="203" Margin="486,75,0,0" VerticalAlignment="Top" Width="178"/>
         <Button Name="PlanProduction" Content="Plan Production" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Margin="10,175,0,0" Click="PlanProduction_Click"/>
         <Label Content="Production LTD " HorizontalAlignment="Left" VerticalAlignment="Top" Height="70" Width="348" FontSize="36" FontWeight="Bold"/>
+        <Button Name="ClientButton" Content="Client Info" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="164" Click="ClientListBox_Click"/>
     </Grid>
 </Window>
 
