@@ -96,6 +96,12 @@ namespace LTD_G_UNIT
             PlanProduction plan = new PlanProduction();
             plan.Show();
         }
+        // this open client info client window
+        private void ClientListBox_Click(object sender, RoutedEventArgs e)
+        {
+            ClietnsInfo client = new ClietnsInfo();
+            client.Show();
+        }
 
         
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LTD_G_UNIT
-{
+{//
     class ControllerForWindows
     {
         DatabaseController _datcontr = new DatabaseController();
