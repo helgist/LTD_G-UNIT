@@ -18,15 +18,6 @@ namespace LTD_G_UNIT
          public int orderid {get; set;}
          public string Employe { get; set; }
          
-
-    //     private static int newID = 1100 ;
-
-    //     public  order()
-    //{
-    //    newID = newID +1;
-    //    orderid = newID;
-
-    //}
     
     }
 }
