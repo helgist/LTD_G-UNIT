@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Window1" Height="400" Width="500">
     <Grid>
-        <Label Content=" totalprice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,314,0,0"/>
-        <TextBox  Name="tprice" IsReadOnly="True" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Margin="119,314,0,0" TextChanged="tprice_TextChanged"/>
+        <Label Content=" totalprice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,314,0,0" FontSize="14" RenderTransformOrigin="0.232,0.388"/>
+        <TextBox  Name="tprice" IsReadOnly="True" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Margin="110,317,0,0" TextChanged="tprice_TextChanged"/>
         <ListBox Name="listboxorder" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="366" Margin="33,20,0,0" SelectionChanged="ListBox_SelectionChanged"/>
-        <Button Content="cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="396,320,0,0" Click="Button_Click"/>
+        <Button Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="394,317,0,0" Click="Button_Click"/>
 
     </Grid>
 </Window>
