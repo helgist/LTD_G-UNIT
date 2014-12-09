@@ -9,17 +9,13 @@ namespace LTD_G_UNIT
     class Controller
     {
 
-
-        
         DatabaseController _Databasecontroller = new DatabaseController();
 
        
-
         //list of employes, when they are avalible and what project they are working on(Order ID number)
         public List<Employe> _employelist = new List<Employe>();
 
-      
-        
+              
         //This method adds to inventory in database
         public void addToDB(string type, int toadd)
         {
@@ -65,7 +61,6 @@ namespace LTD_G_UNIT
 
         }
     
-
         public List<Employe> getemploylist()
         {
 
