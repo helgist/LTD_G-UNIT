@@ -21,40 +21,39 @@ namespace LTD_G_UNIT
     {
 
 
-        
-        List<double> Pricelist = new List<double>();
-        List<Product> productlist = new List<Product>();       
 
-       
+        List<int> Pricelist;  // = new List<int>();
+        List<Product> productlist = new List<Product>();
+
+
         ControllerForWindows _contr = new ControllerForWindows();
         DatabaseController _datacontro = new DatabaseController();
 
         public newsaleswindow()
         {
-            
             InitializeComponent();
+
+            Pricelist = new List<int>();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Window1 wn1 = new Window1();
-            wn1.Show();
             //invoic inv = new invoic();
             //inv.Show();  
             Controller _Controller = new Controller();
             _Controller = new Controller();
-            
-            
-          
-            
-            
+
+
+
+
+
 
             if (int.Parse(type_A.Text) != 0)
             {
 
                 Product product1 = new Product("type1", int.Parse(type_A.Text), 2300);
                 productlist.Add(product1);
-                Pricelist.Add(int.Parse(type_A.Text)*2300);
+                Pricelist.Add(int.Parse(type_A.Text) * 2300);
                 try
                 {
                     _Controller.MakeNewSale("type1", int.Parse(type_A.Text), 2300);
@@ -64,16 +63,16 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
 
-                
+
+
 
             }
-            if (int.Parse(type_B.Text) != 0)
+            else if (int.Parse(type_B.Text) != 0)
             {
                 Product product2 = new Product("type2", int.Parse(type_B.Text), 2200);
                 productlist.Add(product2);
-                Pricelist.Add(int.Parse(type_B.Text)*2200);
+                Pricelist.Add(int.Parse(type_B.Text) * 2200);
                 try
                 {
                     _Controller.MakeNewSale("type2", int.Parse(type_B.Text), 2200);
@@ -83,14 +82,14 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
 
             }
-            if (int.Parse(type_C.Text) != 0)
+            else if (int.Parse(type_C.Text) != 0)
             {
                 Product product3 = new Product("type3", int.Parse(type_C.Text), 2400);
                 productlist.Add(product3);
-                Pricelist.Add(int.Parse(type_C.Text)*2400);
+                Pricelist.Add(int.Parse(type_C.Text) * 2400);
 
                 try
                 {
@@ -103,11 +102,11 @@ namespace LTD_G_UNIT
                 }
             }
 
-            if (int.Parse(type_D.Text) != 0)
+            else if (int.Parse(type_D.Text) != 0)
             {
                 Product product4 = new Product("type4", int.Parse(type_D.Text), 2500);
                 productlist.Add(product4);
-                Pricelist.Add(int.Parse(type_D.Text)*2500);
+                Pricelist.Add(int.Parse(type_D.Text) * 2500);
                 try
                 {
                     _Controller.MakeNewSale("type4", int.Parse(type_D.Text), 2500);
@@ -117,12 +116,12 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                           }
-            if (int.Parse(type_E.Text) != 0)
+            }
+            else if (int.Parse(type_E.Text) != 0)
             {
                 Product product5 = new Product("type5", int.Parse(type_E.Text), 2600);
                 productlist.Add(product5);
-                Pricelist.Add(int.Parse(type_E.Text)*2600);
+                Pricelist.Add(int.Parse(type_E.Text) * 2600);
                 try
                 {
                     _Controller.MakeNewSale("type5", int.Parse(type_E.Text), 2600);
@@ -132,13 +131,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
             }
-            if (int.Parse(type_G.Text) != 0)
+            else if (int.Parse(type_G.Text) != 0)
             {
                 Product product6 = new Product("type6", int.Parse(type_G.Text), 2700);
                 productlist.Add(product6);
-                Pricelist.Add(int.Parse(type_G.Text)*2700);
+                Pricelist.Add(int.Parse(type_G.Text) * 2700);
 
                 try
                 {
@@ -149,13 +148,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
             }
-            if (int.Parse(type_H.Text) != 0)
+            else if (int.Parse(type_H.Text) != 0)
             {
                 Product product7 = new Product("type7", int.Parse(type_H.Text), 2800);
                 productlist.Add(product7);
-                Pricelist.Add(int.Parse(type_H.Text)*2800);
+                Pricelist.Add(int.Parse(type_H.Text) * 2800);
 
                 try
                 {
@@ -166,13 +165,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
             }
-            if (int.Parse(Type_I.Text) != 0)
+            else if (int.Parse(Type_I.Text) != 0)
             {
                 Product product8 = new Product("type8", int.Parse(Type_I.Text), 2900);
                 productlist.Add(product8);
-                Pricelist.Add(int.Parse(Type_I.Text)*2900);
+                Pricelist.Add(int.Parse(Type_I.Text) * 2900);
                 try
                 {
                     _Controller.MakeNewSale("type8", int.Parse(type_H.Text), 2900);
@@ -182,13 +181,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
             }
-            if (int.Parse(type_J.Text) != 0)
+            else if (int.Parse(type_J.Text) != 0)
             {
                 Product product9 = new Product("type9", int.Parse(type_J.Text), 3000);
                 productlist.Add(product9);
-                Pricelist.Add(int.Parse(type_J.Text)*3000);
+                Pricelist.Add(int.Parse(type_J.Text) * 3000);
                 try
                 {
                     _Controller.MakeNewSale("type9", int.Parse(type_J.Text), 3000);
@@ -198,13 +197,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
             }
-            if (int.Parse(type_K.Text) != 0)
+            else if (int.Parse(type_K.Text) != 0)
             {
                 Product product10 = new Product("type11", int.Parse(type_K.Text), 3100);
                 productlist.Add(product10);
-                Pricelist.Add(int.Parse(type_K.Text)* 3100);
+                Pricelist.Add(int.Parse(type_K.Text) * 3100);
                 try
                 {
                     _Controller.MakeNewSale("type11", int.Parse(type_K.Text), 3100);
@@ -214,12 +213,12 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                            }
-            if (int.Parse(type_L.Text) != 0)
+            }
+            else if (int.Parse(type_L.Text) != 0)
             {
                 Product product11 = new Product("type12", int.Parse(type_L.Text), 3200);
                 productlist.Add(product11);
-                Pricelist.Add(int.Parse(type_L.Text)* 3200);
+                Pricelist.Add(int.Parse(type_L.Text) * 3200);
                 try
                 {
                     _Controller.MakeNewSale("type12", int.Parse(type_L.Text), 3200);
@@ -229,13 +228,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                
+
             }
-            if (int.Parse(Type_I.Text) != 0)
+            else if (int.Parse(Type_I.Text) != 0)
             {
                 Product product12 = new Product("type13", int.Parse(Type_I.Text), 3300);
                 productlist.Add(product12);
-                Pricelist.Add(int.Parse(Type_I.Text)* 3300);
+                Pricelist.Add(int.Parse(Type_I.Text) * 3300);
                 try
                 {
                     _Controller.MakeNewSale("type13", int.Parse(Type_I.Text), 3300);
@@ -245,13 +244,13 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-               
+
             }
-            if (int.Parse(type_M.Text) != 0)
+            else if (int.Parse(type_M.Text) != 0)
             {
                 Product product13 = new Product("type14", int.Parse(type_M.Text), 3400);
                 productlist.Add(product13);
-                Pricelist.Add(int.Parse(type_M.Text)* 3400);
+                Pricelist.Add(int.Parse(type_M.Text) * 3400);
                 try
                 {
                     _Controller.MakeNewSale("type14", int.Parse(type_M.Text), 3400);
@@ -261,8 +260,8 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-                           }
-            if (int.Parse(type_N.Text) != 0)
+            }
+            else if (int.Parse(type_N.Text) != 0)
             {
                 Product product14 = new Product("type15", int.Parse(type_N.Text), 3500);
                 productlist.Add(product14);
@@ -276,9 +275,9 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-              
+
             }
-            if (int.Parse(type_S.Text) != 0)
+            else if (int.Parse(type_S.Text) != 0)
             {
                 Product product15 = new Product("type16", int.Parse(type_S.Text), 3600);
                 productlist.Add(product15);
@@ -292,59 +291,64 @@ namespace LTD_G_UNIT
                     Console.WriteLine("SQL conection error " + ex.Message);
 
                 }
-              
+
             }
             else
             {
                 MessageBox.Show("no product to order");
             }
-
-
-        //   _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, Pricelist, Deliverydate.Text, totalpric);
+            Window1 wn1 = new Window1(this);
+            wn1.Show();
+            
+            //   _Controller.createnewOrder(namebox.Text, Phone.Text, Address.Text, Company.Text, Pricelist, Deliverydate.Text, totalpric);
         }
-            //this method return the total price of products
+        //this method return the total price of products
 
-           public int totalprice ()
-           {
-               int totalpric = 0;
+        public int totalprice()
+        {
+            int totalpric = 0;
 
             foreach (int p in Pricelist)
             {
-             totalpric+=p;   
-                    
+                totalpric += p;
+
             }
-               return totalpric;
+            return totalpric;
 
         }
 
 
-           //Fill out automaticly the sale sheed after costumer ID
-           private void FindIfId_Click(object sender, RoutedEventArgs e)
-           {
+        //Fill out automaticly the sale sheed after costumer ID
+        private void FindIfId_Click(object sender, RoutedEventArgs e)
+        {
 
 
-               List<Client> Clielist = _contr.getclientlist();
-
-
-
-               List<Client> IDsearch = Clielist.FindAll(delegate(Client m) { return m.CostumerID == int.Parse(IDtextbox.Text); });
-               IDsearch.ForEach(delegate(Client m)
-               {
-                   namebox.Text = m.Name;
-                   Address.Text = m.Address;
-                   Phone.Text = m.Phone.ToString();
-                   Company.Text = m.CompanyName;
+            List<Client> Clielist = _contr.getclientlist();
 
 
 
-               });
-           }
+            List<Client> IDsearch = Clielist.FindAll(delegate(Client m) { return m.CostumerID == int.Parse(IDtextbox.Text); });
+            IDsearch.ForEach(delegate(Client m)
+            {
+                namebox.Text = m.Name;
+                Address.Text = m.Address;
+                Phone.Text = m.Phone.ToString();
+                Company.Text = m.CompanyName;
+
+
+
+            });
+        }
 
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-    }
-}
+
+           
+        }
+        }
+    
+
 
