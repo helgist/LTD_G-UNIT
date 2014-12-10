@@ -16,7 +16,7 @@ namespace LTD_G_UNIT
          public DateTime dateoforder { get; set; }
          public string deliverydate{ get; set; }
          public int orderid {get; set;}
-         public string Employe { get; set; }
+       //  public string Employe { get; set; }
          
     
     }
