@@ -13,6 +13,7 @@ namespace LTD_G_UNIT
         //hello helgi
         //Product _product ;
         Checkstock _checker;
+        //
         
         public void AddItemsToInventory(string type, int addtostock)
         {
