@@ -19,7 +19,9 @@ namespace LTD_G_UNIT
     /// </summary>
     public partial class PlanProduction : Window
     {
-        Controller _Controler = new Controller();
+        Controller _Controler =  new Controller();
+       
+
         public PlanProduction()
         {
             InitializeComponent();
@@ -32,15 +34,43 @@ namespace LTD_G_UNIT
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
         {
-            foreach(Employe emp in _Controler._employelist)
+            List<order> Orderlist = _Controler.getOrderlist();
+
+
+            foreach (order O in Orderlist)
             {
-                Employelistbox.Items.Add(emp.name + "\n" + "available in " + emp.day + " Days");
+                Orderlistbox.Items.Add("Order ID: " + O.orderid + " Delivery date: " + O.deliverydate);
+
+                foreach (Product P in O.Productlist)
+                {
+                    Orderlistbox.Items.Add(P.type + " Quantity " + P.quant);
+                }
             }
-            foreach (order p in _Controler._orderlist)
+
+            List<Employe> employlist = _Controler.getemploylist();
+            List<Employe> SortedList = employlist.OrderBy(o => o.day).ToList();
+
+            foreach (Employe E in SortedList)
             {
-                
-                Orderlistbox.Items.Add("Order ID " + p.orderid + " Order date " + p.dateoforder  );
+                Employelistbox.Items.Add(E.name + "\n" + "Availeble in " + E.day);
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            int Orderid = int.Parse(OrderID.Text);
+            string Employe = Employetoassign.Text;
+            int days = int.Parse(Daysforproject.Text);
+
+            _Controler.assignemployetoorder(Employe, Orderid);
+            _Controler.Addworkingdaystoemploye(days, Employe);
+
+            MessageBox.Show("You have assingned " + Employe + "\nTo Order " + Orderid + "\nfor " + days + " days");
+
+             
+        }
+
+      
     }
 }

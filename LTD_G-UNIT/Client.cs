@@ -13,6 +13,9 @@ namespace LTD_G_UNIT
         public string Address { get; set; }
         public int Phone { get; set; }
         public int MobilePhone { get; set; }
+        public int CostumerID { get; set; }
+
+   
 
     }
 }

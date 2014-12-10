@@ -4,7 +4,7 @@
         Title="newsaleswindow" Height="400" Width="600" Background="#FFD4D4D4" BorderBrush="#FFFFFCFC" Foreground="Black">
     <Grid>
 
-        <Label Content="                           Sale Sheed " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,10,0,0" Width="349" FontWeight="Bold" Height="38" FontSize="16"/>
+        <Label Content="                           Sale Sheed " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="134,10,0,0" Width="322" FontWeight="Bold" Height="38" FontSize="16"/>
         <Label Content="Type H Grade" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="213,283,0,0" Height="26" Width="94" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -170,18 +170,21 @@
         <TextBox Name="type_L" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="496,165,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="Type_I" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="496,76,0,0" RenderTransformOrigin="0.613,0.526"/>
         <TextBox Name="type_J" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" Margin="496,106,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox Name="name" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,76,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox Name="Address" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,106,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <TextBox Name="Phone" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,135,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,72,0,0" Width="47"/>
-        <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,102,0,0"/>
-        <Label Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,133,0,0" Width="47"/>
-        <Button Content="Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="473,324,0,0" Click="Button_Click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="381,324,0,0"/>
-        <TextBox Name="Deliverydate" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,195,0,0" RenderTransformOrigin="0.613,0.526"/>
-        <Label Content="Delivery day" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,191,0,0" Width="76"/>
-        <Label Content="Company" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,161,0,0"/>
-        <TextBox Name="Company" HorizontalAlignment="Left" Height="18" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,165,0,0"/>
+        <TextBox Name="namebox" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,106,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="Address" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="81,135,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <TextBox Name="Phone" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="80,165,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,102,0,0" Width="47"/>
+        <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,131,0,0"/>
+        <Label Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,161,0,0" Width="47"/>
+        <Button Content="Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="475,324,0,0" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="381,324,0,0" Click="Button_Click_1"/>
+        <TextBox Name="Deliverydate" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="80,225,0,0" RenderTransformOrigin="0.613,0.526"/>
+        <Label Content="Delivery day" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,221,0,0" Width="76"/>
+        <Label Content="Company" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,190,0,0"/>
+        <TextBox Name="Company" HorizontalAlignment="Left" Height="18" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Margin="80,196,0,0"/>
+        <TextBox Name="IDtextbox" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="52" Margin="81,75,0,0"/>
+        <Button Name="FindIfId" Content="Find" HorizontalAlignment="Left" VerticalAlignment="Top" Width="39" Margin="137,76,0,0" Height="19" Click="FindIfId_Click"/>
+        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,72,0,0"/>
 
 
     </Grid>
