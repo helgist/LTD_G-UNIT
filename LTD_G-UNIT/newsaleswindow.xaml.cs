@@ -68,7 +68,7 @@ namespace LTD_G_UNIT
 
 
             }
-            if (int.Parse(type_B.Text) != 0)
+            else     if (int.Parse(type_B.Text) != 0)
             {
                 Product product2 = new Product("type2", int.Parse(type_B.Text), 2200);
                 productlist.Add(product2);
@@ -85,7 +85,7 @@ namespace LTD_G_UNIT
 
 
             }
-            if (int.Parse(type_C.Text) != 0)
+            else if (int.Parse(type_C.Text) != 0)
             {
                 Product product3 = new Product("type3", int.Parse(type_C.Text), 2400);
                 productlist.Add(product3);
@@ -102,7 +102,7 @@ namespace LTD_G_UNIT
                 }
             }
 
-            if (int.Parse(type_D.Text) != 0)
+            else if (int.Parse(type_D.Text) != 0)
             {
                 Product product4 = new Product("type4", int.Parse(type_D.Text), 2500);
                 productlist.Add(product4);
@@ -117,7 +117,7 @@ namespace LTD_G_UNIT
 
                 }
             }
-            if (int.Parse(type_E.Text) != 0)
+            else if (int.Parse(type_E.Text) != 0)
             {
                 Product product5 = new Product("type5", int.Parse(type_E.Text), 2600);
                 productlist.Add(product5);
@@ -133,7 +133,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(type_G.Text) != 0)
+            else if (int.Parse(type_G.Text) != 0)
             {
                 Product product6 = new Product("type6", int.Parse(type_G.Text), 2700);
                 productlist.Add(product6);
@@ -150,7 +150,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(type_H.Text) != 0)
+            else if (int.Parse(type_H.Text) != 0)
             {
                 Product product7 = new Product("type7", int.Parse(type_H.Text), 2800);
                 productlist.Add(product7);
@@ -167,7 +167,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(Type_I.Text) != 0)
+            else if (int.Parse(Type_I.Text) != 0)
             {
                 Product product8 = new Product("type8", int.Parse(Type_I.Text), 2900);
                 productlist.Add(product8);
@@ -183,7 +183,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(type_J.Text) != 0)
+            else if (int.Parse(type_J.Text) != 0)
             {
                 Product product9 = new Product("type9", int.Parse(type_J.Text), 3000);
                 productlist.Add(product9);
@@ -199,7 +199,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(type_K.Text) != 0)
+            else if (int.Parse(type_K.Text) != 0)
             {
                 Product product10 = new Product("type11", int.Parse(type_K.Text), 3100);
                 productlist.Add(product10);
@@ -214,7 +214,7 @@ namespace LTD_G_UNIT
 
                 }
             }
-            if (int.Parse(type_L.Text) != 0)
+            else if (int.Parse(type_L.Text) != 0)
             {
                 Product product11 = new Product("type12", int.Parse(type_L.Text), 3200);
                 productlist.Add(product11);
@@ -230,7 +230,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(Type_I.Text) != 0)
+            else if (int.Parse(Type_I.Text) != 0)
             {
                 Product product12 = new Product("type13", int.Parse(Type_I.Text), 3300);
                 productlist.Add(product12);
@@ -246,7 +246,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(type_M.Text) != 0)
+            else if (int.Parse(type_M.Text) != 0)
             {
                 Product product13 = new Product("type14", int.Parse(type_M.Text), 3400);
                 productlist.Add(product13);
@@ -261,7 +261,7 @@ namespace LTD_G_UNIT
 
                 }
             }
-            if (int.Parse(type_N.Text) != 0)
+            else if (int.Parse(type_N.Text) != 0)
             {
                 Product product14 = new Product("type15", int.Parse(type_N.Text), 3500);
                 productlist.Add(product14);
@@ -277,7 +277,7 @@ namespace LTD_G_UNIT
                 }
 
             }
-            if (int.Parse(type_S.Text) != 0)
+            else if (int.Parse(type_S.Text) != 0)
             {
                 Product product15 = new Product("type16", int.Parse(type_S.Text), 3600);
                 productlist.Add(product15);
@@ -296,6 +296,7 @@ namespace LTD_G_UNIT
             else 
             {
                 MessageBox.Show("no product to order");
+                return;
             }
             Window1 wn1 = new Window1(this);
 

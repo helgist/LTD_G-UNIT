@@ -8,7 +8,7 @@ namespace LTD_G_UNIT
 {
     class Employe
     {
-        //
+        
        public string name { get; set;  }
        public int day { get; set; }
        public int orderNR { get; set; }

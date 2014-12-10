@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,11 +30,11 @@ namespace LTD_G_UNIT
             _controller = new ControllerForWindows();
             _databaseController = new DatabaseController();
         }
-        //METHOD TO SAVE CLIENT INTO DATABASE
+        //METHOD TO SAVE CLIENT INTO DATABASEf
         private void SaveBut_Click(object sender, RoutedEventArgs e)
         {
-            _controller.newClient();
-            _databaseController.AddClient(NameBut.Text, CompanyBut.Text ,AddressBut.Text,int.Parse(PhoneBut.Text),int.Parse(MobileBut.Text));
+            _controller.newClient(NameBut.Text, CompanyBut.Text, AddressBut.Text, int.Parse(PhoneBut.Text), int.Parse(MobileBut.Text));
+           //_databaseController.AddClient(NameBut.Text, CompanyBut.Text ,AddressBut.Text,int.Parse(PhoneBut.Text),int.Parse(MobileBut.Text));
             NameBut.Text = "";
             CompanyBut.Text = "";
             PhoneBut.Text = "";
