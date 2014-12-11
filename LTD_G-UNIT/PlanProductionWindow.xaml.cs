@@ -39,20 +39,22 @@ namespace LTD_G_UNIT
 
             foreach (order O in Orderlist)
             {
-                Orderlistbox.Items.Add("Order ID: " + O.orderid + " Delivery date: " + O.deliverydate);
+                Orderlistbox.Items.Add("\n" + "Order ID: " + O.orderid + " Delivery date: " + O.deliverydate);
 
                 foreach (Product P in O.Productlist)
                 {
-                    Orderlistbox.Items.Add(P.type + " Quantity " + P.quant);
+                    Orderlistbox.Items.Add(P.type + " Quantity " + P.quant );
                 }
+               
             }
+         
 
             List<Employe> employlist = _Controler.getemploylist();
             List<Employe> SortedList = employlist.OrderBy(o => o.day).ToList();
 
             foreach (Employe E in SortedList)
             {
-                Employelistbox.Items.Add(E.name + "\n" + "Availeble in " + E.day);
+                Employelistbox.Items.Add(E.name + "\n" + "Availeble in " + E.day + " Days");
             }
         }
 

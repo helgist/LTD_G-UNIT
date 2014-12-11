@@ -60,7 +60,6 @@
     <Compile Include="ClietnsInfo.xaml.cs">
       <DependentUpon>ClietnsInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControllerForWindows.cs" />
     <Compile Include="costumer.cs" />
     <Compile Include="CreateNewClient.xaml.cs">
       <DependentUpon>CreateNewClient.xaml</DependentUpon>

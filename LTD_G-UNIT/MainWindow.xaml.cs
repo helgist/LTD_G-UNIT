@@ -34,12 +34,12 @@ namespace LTD_G_UNIT
             ListBox.Items.Clear();
             AddText.Text = "";
           
-            _controller = new ControllerForWindows();
+            _controller = new Controller();
         }
        
         //method for Save button 
 
-        ControllerForWindows _controller;
+        Controller _controller;
         private void SaveButton1_Click(object sender, RoutedEventArgs e)
         {
             DateTime dt = DateTime.Now;

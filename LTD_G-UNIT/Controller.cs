@@ -10,6 +10,8 @@ namespace LTD_G_UNIT
     {
 
         DatabaseController _Databasecontroller = new DatabaseController();
+        public List<Client> _clientlist = new List<Client>();
+        List<string> _allData;
 
        
         //list of employes, when they are avalible and what project they are working on(Order ID number)
@@ -95,6 +97,52 @@ namespace LTD_G_UNIT
         {
             _Databasecontroller.Addworkingdaystoemploye(days, name);
         }
+        //from other controller
+        public void newClient(string Name, string CompanyName, string Address1, int Phone, int MobilePhone)
+        {
+            Client clie = new Client();
+            clie.Name = Name;
+            clie.CompanyName = CompanyName;
+            clie.Address = Address1;
+            clie.Phone = Phone;
+            clie.MobilePhone = MobilePhone;
+
+            _clientlist.Add(clie);
+
+            _Databasecontroller.AddClient(Name, CompanyName, Address1, Phone, MobilePhone);
+
+        }
+        public List<Client> getclientlist()
+        {
+
+            _clientlist = _Databasecontroller.getlistofcostumers();
+            return _clientlist;
+        }
+          public Controller()
+        {
+            _allData = new List<string>();
+           
+
+        }
+          public void ClearData()
+          {
+              _allData.Clear();
+          }
+          internal void SaveNotification(String data)
+          {
+              _allData.Add(data);
+          }
+
+          public string DataToDisplay()
+          {
+              string returnData = "";
+              foreach (string s in _allData)
+              {
+                  returnData += s + "\n";
+
+              }
+              return returnData;
+          }
        
     }
 }

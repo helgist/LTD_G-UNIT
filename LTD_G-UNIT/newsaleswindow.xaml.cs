@@ -26,7 +26,7 @@ namespace LTD_G_UNIT
         List<Product> productlist = new List<Product>();
 
 
-        ControllerForWindows _contr = new ControllerForWindows();
+        Controller _contr = new Controller();
         DatabaseController _datacontro = new DatabaseController();
 
         public newsaleswindow()

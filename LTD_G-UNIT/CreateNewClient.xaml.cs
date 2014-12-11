@@ -21,13 +21,13 @@ namespace LTD_G_UNIT
     public partial class CreateNewClient : Window
     {
 
-        ControllerForWindows _controller;
+        Controller _controller;
         DatabaseController _databaseController;
         //METHOD FOR NEW CLIENT
         public CreateNewClient()
         {
              InitializeComponent();
-            _controller = new ControllerForWindows();
+             _controller = new Controller();
             _databaseController = new DatabaseController();
         }
         //METHOD TO SAVE CLIENT INTO DATABASEf
