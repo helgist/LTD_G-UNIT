@@ -26,7 +26,7 @@ namespace LTD_G_UNIT
         {
             InitializeComponent();
         }
-
+        //FROM THERE RETRIEVE FROM DATABASE STOCK AMOUNT
         public void Button_Click(object sender, RoutedEventArgs e)
         {
              

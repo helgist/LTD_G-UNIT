@@ -21,12 +21,14 @@ namespace LTD_G_UNIT
     public partial class MainWindow : Window
     {
         
-        //Shows the second menu
+        //Shows THE UPDATESTOCKWINDOW
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             updatestockWindow updt = new updatestockWindow();
             updt.Show();
         }
+
+        //THIS ADD DATA TO THE LISTBOX
         public MainWindow()
         {
            
@@ -59,13 +61,13 @@ namespace LTD_G_UNIT
         {
             this.Close();
         }
-        
+        // OPEN NEW SALE WINDOW
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             newsaleswindow s1 = new newsaleswindow();
             s1.Show();
         }
-
+        //OPEN CHECKSTOCK WINDOW
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
            
@@ -73,8 +75,8 @@ namespace LTD_G_UNIT
             chk.Show();
             
         }
-        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT 
        
+        //OPEN NEW WINDOW FOR CREATE  NEW CLIENT 
         private void AddClient_Click(object sender, RoutedEventArgs e)
         {
             CreateNewClient cre = new CreateNewClient();
@@ -90,7 +92,7 @@ namespace LTD_G_UNIT
             _controller.ClearData();
         
         }
-
+        //THIS OPEN THE WINDOW FOR PLAN PRODUCTION
         private void PlanProduction_Click(object sender, RoutedEventArgs e)
         {
             PlanProduction plan = new PlanProduction();

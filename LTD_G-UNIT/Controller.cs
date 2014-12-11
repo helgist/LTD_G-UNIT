@@ -43,10 +43,8 @@ namespace LTD_G_UNIT
 
         //this method creates new order
         public void createnewOrder(string name, string telphon, string adress,string company, List<Product> Productlist, string delivery, int costumerID)
-        {
-            
+        { 
             costumer newcostumer = new costumer();
-            
             newcostumer.Company = company;
             newcostumer.Name = name;
             newcostumer.Telephon = telphon;
@@ -61,7 +59,6 @@ namespace LTD_G_UNIT
             Random rnd = new Random();
             int orderID = rnd.Next(0001, 9999);
             
-
             _Databasecontroller.CreateNewOrder(orderID, name, company, telphon, adress, costumerID, DateTime.Now, delivery);
 
             foreach(Product P in Productlist)
@@ -76,16 +73,12 @@ namespace LTD_G_UNIT
     
         public List<Employe> getemploylist()
         {
-
             return _Databasecontroller.getlistofemployes();
- 
         }
 
         public List<order> getOrderlist()
         {
-           
-            return _Databasecontroller.getlistoforders();
-
+                 return _Databasecontroller.getlistoforders();
         }
 
         public void assignemployetoorder(string name, int orderID)
