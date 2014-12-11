@@ -22,6 +22,7 @@ namespace LTD_G_UNIT
     /// 
     public partial class ClietnsInfo : Window
     {
+        Controller _contr = new Controller();
         // This method call all the clients info
         public ClietnsInfo()
         {
@@ -30,36 +31,14 @@ namespace LTD_G_UNIT
 
         private void seebut_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection Conn = new SqlConnection(
-                                                    "Server=ealdb1.eal.local;" +
-                                                    "Database=EJL20_DB;" +
-                                                    "User ID=ejl20_usr;" +
-                                                    "Password=Baz1nga20;");
-            try
+
+            List<Client> Clielist = _contr.getclientlist();
+            foreach(Client C in Clielist )
             {
-                Conn.Open();
-
-                SqlCommand cmd = new SqlCommand("listallclient", Conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataReader rdr = cmd.ExecuteReader();
-
-                while (rdr.HasRows && rdr.Read())
-                {
-                    ClientListBox.Items.Add("\nName: " + rdr["Name"] + " \nCompany Name: " + rdr["CompanyName"] + "\nAddress: " + rdr["Address1"] + " \nPhone: " + rdr["Phone"] + " \nMobile No.: " + rdr["MobilePhone"] + "\nID" + rdr["ID"]);
-
-                }
-            }
-            catch (SqlException x)
-            {
-                Console.WriteLine("conection error " + x.Message);
+                ClientListBox.Items.Add("\nName: " + C.Name + " \nCompany Name: " + C.CompanyName + "\nAddress: " + C.Address + " \nPhone: " + C.Phone + " \nMobile No.: " + C.MobilePhone + "\nID" + C.CostumerID);
             }
 
-            finally
-            {
-                Conn.Close();
-                Conn.Dispose();
-            }  
+       
         }
     }
 }
