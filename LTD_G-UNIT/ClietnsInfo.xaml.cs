@@ -19,6 +19,7 @@ namespace LTD_G_UNIT
     /// <summary>
     /// Interaction logic for ClietnsInfo.xaml
     /// </summary>
+    /// 
     public partial class ClietnsInfo : Window
     {
         // This method call all the clients info
